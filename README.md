@@ -1,5 +1,9 @@
 # Asg1-ID: Your Project's Name
 
+## Github links
+Github Repo Link: https://github.com/pikapokaboo/Asg1-ID.git
+Github Page Link: https://github.com/pikapokaboo/Asg1-ID
+
 ## Overview
 Provide one or two paragraphs giving an overview of your project. Explain what your project does and why it is useful.  
 Essentially, this section serves as your sales pitch to describe your project's purpose and value.
