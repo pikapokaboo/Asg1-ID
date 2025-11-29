@@ -1,87 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- META -->
+  <!-- Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indie VTuber Profiles</title>
+  <title>VTuber Profiles</title>
 
-  <!-- STYLES -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Scripts -->
   <script defer src="js/main.js"></script>
 </head>
 
 <body class="dark">
 
-<header class="site-header">
+<header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <h1 class="brand"><a href="index.html">Indie VTuber Hub</a></h1>
     <nav class="main-nav">
-      <a href="index.html">home();</a>
-      <a href="profiles.html">profiles();</a>
-      <a href="shop.html">shop();</a>
+      <a href="index.html">Home</a>
+      <a href="profiles.html" class="active">Profiles</a>
+      <a href="shop.html">Shop</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <section class="intro">
-      <h2>Indie Creators Index</h2>
-      <p class="muted">Pages auto-personalize via accent theme override.</p>
+
+  <!-- Simple page header -->
+  <section class="hero hero-simple">
+    <div class="hero-text">
+      <h2>Independent VTuber Profiles</h2>
+      <p class="muted">
+        Browse the featured creators and click through to see their individual pages.
+      </p>
+    </div>
   </section>
 
-  <!-- SEARCH BAR COSMETIC (enable later if adding more creators) -->
-  <input type="text" placeholder="🔎 Search creators (cosmetic for now)" disabled class="search-bar disabled-bar">
+  <!-- Profile list -->
+  <section>
+    <h2>Creator List</h2>
+    <div class="grid vtuber-list">
+      <article class="vtuber-card">
+        <img src="images/dokibird/dokibird_pfp.jpg" alt="Dokibird profile picture">
+        <h3>Dokibird</h3>
+        <p class="small muted">Fast paced FPS streams and jokes.</p>
+        <a href="vtuber.html?v=dokibird" class="btn">View Profile</a>
+      </article>
 
-  <section class="grid vtuber-directory">
-    <article class="vtuber-card">
-      <img src="images/dokibird/dokibird_pfp.jpg" alt="Dokibird PFP">
-      <h3>Dokibird</h3>
-      <p class="muted small">FPS birb, chaos consumer</p>
-      <a href="vtuber.html?v=dokibird" class="btn">Visit Profile</a>
-    </article>
+      <article class="vtuber-card">
+        <img src="images/sameko/sameko_pfp.jpg" alt="Sameko Saba profile picture">
+        <h3>Sameko Saba</h3>
+        <p class="small muted">Art, chatting and quiet game sessions.</p>
+        <a href="vtuber.html?v=sameko" class="btn">View Profile</a>
+      </article>
 
-    <article class="vtuber-card">
-      <img src="images/sameko/sameko_saba_pfp.jpg" alt="Sameko Saba PFP">
-      <h3>Sameko Saba</h3>
-      <p class="muted small">Cozy ocean shark artist</p>
-      <a href="vtuber.html?v=sameko" class="btn">Visit Profile</a>
-    </article>
+      <article class="vtuber-card">
+        <img src="images/mint/mint_pfp.jpg" alt="Mint Fantôme profile picture">
+        <h3>Mint Fantôme</h3>
+        <p class="small muted">Chill music, covers and soft talking.</p>
+        <a href="vtuber.html?v=mint" class="btn">View Profile</a>
+      </article>
 
-    <article class="vtuber-card">
-      <img src="images/mint/mint_fantome_pfp.jpg" alt="Mint Fantôme PFP">
-      <h3>Mint Fantôme</h3>
-      <p class="muted small">Lo-fi ghost idol melodies</p>
-      <a href="vtuber.html?v=mint" class="btn">Visit Profile</a>
-    </article>
-
-    <article class="vtuber-card">
-      <img src="images/nimi/nimi_nightmare_pfp.jpg" alt="Nimi Nightmare PFP">
-      <h3>Nimi Nightmare</h3>
-      <p class="muted small">Demon screams, horror-core lore</p>
-      <a href="vtuber.html?v=nimi" class="btn">Visit Profile</a>
-    </article>
+      <article class="vtuber-card">
+        <img src="images/nimi/nimi_pfp.jpg" alt="Nimi Nightmare profile picture">
+        <h3>Nimi Nightmare</h3>
+        <p class="small muted">Scary games and strong reactions.</p>
+        <a href="vtuber.html?v=nimi" class="btn">View Profile</a>
+      </article>
+    </div>
   </section>
-
-  <!-- ADD 3️⃣ merch preview link for each vtuber -->
-  <section class="intro">
-      <h2>Merch Quick Peek</h2>
-      <p class="muted small">Click the shop tab to browse full info, reviews, and availability.</p>
-  </section>
-
-  <div class="grid preview-fake-clips">
-      <div class="fake-clip"><span>🛍 doki hoodie + poster + keychain seeds</span></div>
-      <div class="fake-clip"><span>☕ saba mug experiments + plush ETA soon</span></div>
-      <div class="fake-clip"><span>👻 mint hoodie DIM=0 (gone), poster UI sketched</span></div>
-      <div class="fake-clip"><span>😈 nimi figurine warping boundaries + poster locked</span></div>
-  </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p class="muted small">Build Progress: Profile indexing stable. Clip and merch polish pending.</p>
+    <p>Indie VTuber Hub &copy; 2025</p>
   </div>
 </footer>
 

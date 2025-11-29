@@ -1,51 +1,60 @@
-// -------------------- VTUBER PROFILE DATA --------------------
+// VTuber data used for profiles and shop
+// To update: edit descriptions, schedules, clips and merch here.
 const vtubers = {
   dokibird: {
     name: "Dokibird",
     accent: "#e73a4a",
     bg: "#1b0a0f",
-    desc: "Chaotic bird VTuber known for FPS, memes, and scuffed hype.",
-    links: { YouTube: "#", Twitch: "#", Twitter: "#" },
-    clips: ["Insane FPS Highlights", "Gremlin Moments", "Cursed Meme.exe"],
-    schedule: ["Mon 8PM–10PM", "Thu 7PM–11PM", "Sat 9PM–1AM"],
+    desc: "Chaotic bird VTuber known for FPS streams, memes and loud reactions.",
+    links: {
+      // Replace "#" with real links when available
+      YouTube: "https://www.youtube.com/Dokibird",
+      Twitch: "https://twitter.com/dokibird",
+      Twitter: "https://www.twitch.tv/dokibird",
+      TikTok: "https://www.tiktok.com/@dokibird"
+    },
+    clips: [
+      "Insane FPS highlights",
+      "Gremlin moment compilation",
+      "Watching cursed videos"
+    ],
+    schedule: [
+      "Monday 8PM – 10PM",
+      "Thursday 7PM – 11PM",
+      "Saturday 9PM – 1AM"
+    ],
     merch: [
-      { id:"doki-merch-1", title:"Gremlin Bird Hoodie", price:48.00, soldOut:false, tag:"new", reviews:[
-        {name:"Lyn",text:"Very comfy, quality stitching!",stars:5},
-        {name:"Eli",text:"Best hoodie energy!",stars:4},
-        {name:"Mira",text:"Super warm and red is perfect!",stars:5}
-      ]},
-      { id:"doki-merch-2", title:"Dimension Glitch Poster", price:20.00, soldOut:true, tag:"limited", reviews:[
-        {name:"Kai",text:"Beautiful wall piece",stars:5},
-        {name:"Mira",text:"My room is now 20% more cursed",stars:4}
-      ]},
-      { id:"doki-merch-3", title:"Bird Bite Keychain", price:9.50, soldOut:false, tag:"upcoming", reviews:[
-        {name:"Jen",text:"Metal feels premium!",stars:5},
-        {name:"Rin",text:"Loud clink but I like loud",stars:4}
-      ]}
-    ]
-  },
-
-  nimi: {
-    name: "Nimi Nightmare",
-    accent: "#7b3cff",
-    bg: "#0f0b18",
-    desc: "Nightmare demon indie VTuber who narrates lore at max volume.",
-    links: { YouTube:"#", Twitch:"#", Discord:"#"},
-    clips: ["Boss Fight Panic Arc", "Silent Scares Clip", "Ear-piercing scream comp"],
-    schedule: ["Fri 10PM–2AM", "Sun 7PM–11PM", "Wed 9PM–12AM"],
-    merch: [
-      {id:"nimi-merch-1", title:"Nightmare Figurine", price:65.0, soldOut:false, tag:"new", reviews:[
-        {name:"Gus",text:"Sculpt detail makes me fear.",stars:5},
-        {name:"Jen",text:"I have nightmares now, thanks.",stars:4}
-      ]},
-      {id:"nimi-merch-2", title:"Abyss Horror Poster", price:20.0, soldOut:true, tag:"limited", reviews:[
-        {name:"Mira",text:"Actually terrifying.",stars:5},
-        {name:"Lea",text:"Colors go hard, vibes go harder",stars:5}
-      ]},
-      {id:"nimi-merch-3", title:"Stream Kit Bundle", price:82.0, soldOut:false, tag:"upcoming", reviews:[
-        {name:"Tom",text:"Great bundle value",stars:5},
-        {name:"Ada",text:"Manual says cursed. Probably is.",stars:4}
-      ]}
+      {
+        id: "doki-merch-1",
+        title: "Gremlin Bird Hoodie",
+        price: 48.0,
+        soldOut: false,
+        tag: "new",
+        reviews: [
+          { name: "Lyn", text: "Very comfy and warm.", stars: 5 },
+          { name: "Eli", text: "Fits nicely and looks great.", stars: 4 }
+        ]
+      },
+      {
+        id: "doki-merch-2",
+        title: "Dimension Glitch Poster",
+        price: 20.0,
+        soldOut: true,
+        tag: "limited",
+        reviews: [
+          { name: "Kai", text: "Print quality is very sharp.", stars: 5 }
+        ]
+      },
+      {
+        id: "doki-merch-3",
+        title: "Bird Keychain",
+        price: 9.5,
+        soldOut: false,
+        tag: "upcoming",
+        reviews: [
+          { name: "Mira", text: "Small but detailed.", stars: 4 }
+        ]
+      }
     ]
   },
 
@@ -53,22 +62,51 @@ const vtubers = {
     name: "Sameko Saba",
     accent: "#1e90ff",
     bg: "#0a121b",
-    desc: "Cozy art-shark VTuber who spills soup and draws dangerously.",
-    links: { YouTube:"#", Twitch:"#", Twitter:"#", Instagram:"#"},
-    clips: ["Ocean Debug Stream", "Cafe Warm Vibes", "SCUFFED OCEAN PHYSICS"],
-    schedule: ["Wed 6PM–9PM", "Sun 3PM–8PM"],
+    desc: "Art and chatting VTuber with a calm shark theme.",
+    links: {
+      YouTube: "https://www.youtube.com/@SamekoSaba",
+      Twitter: "https://x.com/samekosaba"
+    },
+    clips: [
+      "Chill drawing session",
+      "Late night cafe stream",
+      "Singing and small talk"
+    ],
+    schedule: [
+      "Wednesday 6PM – 9PM",
+      "Sunday 3PM – 8PM"
+    ],
     merch: [
-      {id:"saba-merch-1", title:"Shark Beanie", price:24.0, soldOut:false, tag:"new", reviews:[
-        {name:"Lyn",text:"Fits perfectly on stream.",stars:5},
-        {name:"Mason",text:"Snug but cute!!",stars:4}
-      ]},
-      {id:"saba-merch-2", title:"Deep Sea Mug", price:18.0, soldOut:false, tag:"upcoming", reviews:[
-        {name:"Tom",text:"Keeps drinks hot!",stars:5},
-        {name:"Rin",text:"Shonk cup supremacy",stars:5}
-      ]},
-      {id:"saba-merch-3", title:"Shark Plush", price:34.5, soldOut:true, tag:"limited", reviews:[
-        {name:"Jen",text:"SO soft.",stars:5}
-      ]}
+      {
+        id: "saba-merch-1",
+        title: "Shark Beanie",
+        price: 24.0,
+        soldOut: false,
+        tag: "new",
+        reviews: [
+          { name: "Lyn", text: "Very cute and fits well.", stars: 5 }
+        ]
+      },
+      {
+        id: "saba-merch-2",
+        title: "Ocean Mug",
+        price: 18.0,
+        soldOut: false,
+        tag: "upcoming",
+        reviews: [
+          { name: "Tom", text: "Nice size for coffee or tea.", stars: 4 }
+        ]
+      },
+      {
+        id: "saba-merch-3",
+        title: "Shark Sticker Set",
+        price: 7.5,
+        soldOut: true,
+        tag: "limited",
+        reviews: [
+          { name: "Kai", text: "Sticks well and looks bright.", stars: 5 }
+        ]
+      }
     ]
   },
 
@@ -76,80 +114,436 @@ const vtubers = {
     name: "Mint Fantôme",
     accent: "#5bd1c7",
     bg: "#0e1418",
-    desc: "Lo-fi ghost idol who sings calamity tunes calmly.",
-    links: { YouTube:"#", Twitch:"#", Twitter:"#"},
-    clips: ["Lo-Fi Karaoke.exe","Haunted Track Drop","Ghost Reactions"],
-    schedule: ["Tue 9PM–12AM","Sun 4PM–8PM"],
+    desc: "Lo-fi ghost themed VTuber focused on relaxed music and games.",
+    links: {
+      YouTube: "https://www.youtube.com/@mintfantome",
+      Twitter: "https://x.com/MintFantome",
+      Bluesky: "https://bsky.app/profile/mintfantome.ghostmaid.cafe"
+    },
+    clips: [
+      "Soft lo-fi karaoke",
+      "Original track preview",
+      "Trying a horror game"
+    ],
+    schedule: [
+      "Tuesday 9PM – 12AM",
+      "Sunday 4PM – 8PM"
+    ],
     merch: [
-      {id:"mint-merch-1", title:"Phantom CD Album", price:13.0, soldOut:false, tag:"new", reviews:[
-        {name:"Sam",text:"Audio is immaculate!",stars:5},
-        {name:"Mira",text:"Brain altered gently.",stars:5}
-      ]},
-      {id:"mint-merch-2", title:"Spectral Hoodie", price:52.0, soldOut:true, tag:"limited", reviews:[
-        {name:"Tom",text:"Warm and spectral 👍",stars:4},
-        {name:"Kai",text:"Glow-up ghost energy",stars:5},
-        {name:"Ada",text:"I haunt better now",stars:5}
-      ]},
-      {id:"mint-merch-3", title:"Mint HD Poster", price:22.5, soldOut:false, tag:"upcoming", reviews:[
-        {name:"Nora",text:"Thick paper & clean print!",stars:5}
-      ]}
+      {
+        id: "mint-merch-1",
+        title: "Phantom CD Album",
+        price: 13.0,
+        soldOut: false,
+        tag: "new",
+        reviews: [
+          { name: "Sam", text: "Very relaxing songs.", stars: 5 }
+        ]
+      },
+      {
+        id: "mint-merch-2",
+        title: "Ghost Hoodie",
+        price: 52.0,
+        soldOut: true,
+        tag: "limited",
+        reviews: [
+          { name: "Nora", text: "Material feels thick and warm.", stars: 5 }
+        ]
+      },
+      {
+        id: "mint-merch-3",
+        title: "Mint Poster",
+        price: 22.5,
+        soldOut: false,
+        tag: "upcoming",
+        reviews: [
+          { name: "Rin", text: "Art looks very clear.", stars: 4 }
+        ]
+      }
+    ]
+  },
+
+  nimi: {
+    name: "Nimi Nightmare",
+    accent: "#7b3cff",
+    bg: "#0f0b18",
+    desc: "Horror themed VTuber who plays scary games and tells stories.",
+    links: {
+      YouTube: "https://www.youtube.com/@niminightmare",
+      Twitter: "https://x.com/niminightmare",
+      Bluesky: "https://bsky.app/profile/niminightmare.bsky.social"
+    },
+    clips: [
+      "Jump scare compilation",
+      "Late night horror game",
+      "Story time and lore"
+    ],
+    schedule: [
+      "Friday 10PM – 2AM",
+      "Sunday 7PM – 11PM"
+    ],
+    merch: [
+      {
+        id: "nimi-merch-1",
+        title: "Nimi Figurine",
+        price: 65.0,
+        soldOut: false,
+        tag: "new",
+        reviews: [
+          { name: "Gus", text: "Nice details on the model.", stars: 5 }
+        ]
+      },
+      {
+        id: "nimi-merch-2",
+        title: "Horror Poster",
+        price: 20.0,
+        soldOut: true,
+        tag: "limited",
+        reviews: [
+          { name: "Mira", text: "Looks intense on the wall.", stars: 5 }
+        ]
+      },
+      {
+        id: "nimi-merch-3",
+        title: "Stream Starter Bundle",
+        price: 82.0,
+        soldOut: false,
+        tag: "upcoming",
+        reviews: [
+          { name: "Ada", text: "Good value for the contents.", stars: 4 }
+        ]
+      }
     ]
   }
 };
 
-// -------------------- HERO SLIDESHOW FIX --------------------
-let currentSlide = 0;
-
-function changeSlide(n) {
-  const slides = document.querySelectorAll(".slide");
-  slides[currentSlide].classList.remove("active");
-  currentSlide = (currentSlide + n + slides.length) % slides.length;
-  slides[currentSlide].classList.add("active");
+// Helper: read a query string key from the URL
+function getQueryParam(key) {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(key);
 }
 
-function nextSlide() { changeSlide(1); }
-function prevSlide() { changeSlide(-1); }
+// Set up hero slider on the index page
+function setupHeroSlider() {
+  const slider = document.querySelector(".hero-slider");
+  if (!slider) return;
 
-// Auto-cycle every 6 seconds
-setInterval(nextSlide, 6000);
+  const slides = slider.querySelectorAll(".slide");
+  if (!slides.length) return;
 
-// -------------------- POPULATE VTUBER PROFILE PAGE --------------------
-function populateVT() {
-  const id = getQueryParam("v");
-  if (!id || !vtubers[id]) {
-    console.error("❌ VTuber ID not found in data object");
-    return;
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = index;
+    slides[currentIndex].classList.add("active");
   }
+
+  // Expose functions for buttons
+  window.nextSlide = function () {
+    const next = (currentIndex + 1) % slides.length;
+    showSlide(next);
+  };
+
+  window.prevSlide = function () {
+    const prev = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  };
+
+  // Auto rotate
+  setInterval(() => {
+    window.nextSlide();
+  }, 7000);
+}
+
+// Fill VTuber profile page
+function populateVtuberPage() {
+  const id = getQueryParam("v");
+  if (!id || !vtubers[id]) return;
 
   const vt = vtubers[id];
 
-  // Apply theme
+  // Page title
+  const pageTitle = document.getElementById("pageTitle");
+  if (pageTitle) {
+    pageTitle.textContent = vt.name + " | Indie VTuber Hub";
+  }
+  document.title = vt.name + " | Indie VTuber Hub";
+
+  // Theme colors
   document.body.style.backgroundColor = vt.bg;
-  document.getElementById("siteHeader").style.background = vt.accent;
+  const header = document.getElementById("siteHeader");
+  if (header) {
+    header.style.borderBottomColor = vt.accent;
+  }
 
-  // Set PFP correctly
-  document.getElementById("profileImg").src = `images/${id}/${id}_pfp.jpg`;
+  // Banner and profile images
+  const bannerImg = document.getElementById("bannerImg");
+  if (bannerImg) {
+    bannerImg.src = "images/" + id + "/banner.jpg";
+  }
 
-  // Update text
-  document.getElementById("vtuberName").textContent = vt.name;
-  document.getElementById("vtuberDesc").textContent = vt.desc;
+  const profileImg = document.getElementById("profileImg");
+  if (profileImg) {
+    profileImg.src = "images/" + id + "/" + id + "_pfp.jpg";
+  }
 
-  // Inject socials
-  document.getElementById("socialLinks").innerHTML =
-      Object.entries(vt.links).map(([k,v]) =>
-      `<li><a href="${v}" target="_blank">${k}</a></li>`).join("");
+  // Name and description
+  const nameEl = document.getElementById("vtuberName");
+  if (nameEl) nameEl.textContent = vt.name;
+
+  const descEl = document.getElementById("vtuberDesc");
+  if (descEl) descEl.textContent = vt.desc;
+
+  // Social links
+  const socialList = document.getElementById("socialLinks");
+  if (socialList) {
+    socialList.innerHTML = "";
+    Object.keys(vt.links).forEach((platform) => {
+      const url = vt.links[platform];
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = platform;
+      li.appendChild(a);
+      socialList.appendChild(li);
+    });
+  }
 
   // Schedule
-  document.getElementById("scheduleList").innerHTML =
-      vt.schedule.map(s => `<li>${s}</li>`).join("");
+  const scheduleUl = document.getElementById("scheduleList");
+  if (scheduleUl) {
+    scheduleUl.innerHTML = "";
+    vt.schedule.forEach((line) => {
+      const li = document.createElement("li");
+      li.textContent = line;
+      scheduleUl.appendChild(li);
+    });
+  }
 
   // Clips
-  document.getElementById("clipsGrid").innerHTML =
-      vt.clips.map(c =>
-      `<article class="video-card"><img src="images/placeholder.png"><h4>${c}</h4></article>`).join("");
+  const clipsGrid = document.getElementById("clipsGrid");
+  if (clipsGrid) {
+    clipsGrid.innerHTML = "";
+    vt.clips.forEach((title) => {
+      const card = document.createElement("article");
+      card.className = "video-card";
+      card.setAttribute("data-title", title.toLowerCase());
+
+      const h4 = document.createElement("h4");
+      h4.textContent = title;
+
+      card.appendChild(h4);
+      clipsGrid.appendChild(card);
+    });
+  }
+
+  // Clip search filter
+  const clipSearch = document.getElementById("clipSearch");
+  if (clipSearch && clipsGrid) {
+    clipSearch.addEventListener("input", function () {
+      const query = clipSearch.value.toLowerCase();
+      const cards = clipsGrid.querySelectorAll(".video-card");
+      cards.forEach((card) => {
+        const title = card.getAttribute("data-title");
+        if (title && title.indexOf(query) !== -1) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  }
+
+  // Merch preview on VTuber page
+  const merchGridVT = document.getElementById("merchGridVT");
+  if (merchGridVT) {
+    merchGridVT.innerHTML = "";
+    vt.merch.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "merch-card";
+      card.setAttribute("data-vt", id);
+      card.setAttribute("data-item", item.id);
+
+      const title = document.createElement("h4");
+      title.textContent = item.title;
+
+      const price = document.createElement("p");
+      if (item.soldOut) {
+        const spanOld = document.createElement("span");
+        spanOld.className = "sold-out";
+        spanOld.textContent = "$" + item.price.toFixed(2);
+        const spanText = document.createElement("span");
+        spanText.textContent = " Sold out";
+        price.appendChild(spanOld);
+        price.appendChild(spanText);
+      } else {
+        price.textContent = "$" + item.price.toFixed(2);
+      }
+
+      card.appendChild(title);
+      card.appendChild(price);
+      merchGridVT.appendChild(card);
+
+      // Open modal from VTuber page as well
+      card.addEventListener("click", function () {
+        openMerchModal(id, item.id);
+      });
+    });
+  }
 }
 
-// -------------------- INIT --------------------
-window.addEventListener("load", () => {
-  populateVT();
+// Fill shop page grid
+function populateShopPage() {
+  const grid = document.getElementById("merchGridShop");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+  Object.keys(vtubers).forEach((id) => {
+    const vt = vtubers[id];
+    vt.merch.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "merch-card";
+      card.setAttribute("data-vt", id);
+      card.setAttribute("data-item", item.id);
+      card.setAttribute("data-tag", item.tag);
+
+      const title = document.createElement("h3");
+      title.textContent = item.title;
+
+      const price = document.createElement("p");
+      if (item.soldOut) {
+        const spanOld = document.createElement("span");
+        spanOld.className = "sold-out";
+        spanOld.textContent = "$" + item.price.toFixed(2);
+        const spanText = document.createElement("span");
+        spanText.textContent = " Sold out";
+        price.appendChild(spanOld);
+        price.appendChild(spanText);
+      } else {
+        price.textContent = "$" + item.price.toFixed(2);
+      }
+
+      const byline = document.createElement("p");
+      byline.className = "small muted";
+      byline.textContent = "Creator: " + vt.name;
+
+      card.appendChild(title);
+      card.appendChild(price);
+      card.appendChild(byline);
+      grid.appendChild(card);
+
+      card.addEventListener("click", function () {
+        openMerchModal(id, item.id);
+      });
+    });
+  });
+
+  // Search by item name
+  const searchInput = document.getElementById("merchSearch");
+  if (searchInput) {
+    searchInput.addEventListener("input", function () {
+      const query = searchInput.value.toLowerCase();
+      const cards = grid.querySelectorAll(".merch-card");
+      cards.forEach((card) => {
+        const title = card.querySelector("h3");
+        if (!title) return;
+        const text = title.textContent.toLowerCase();
+        if (text.indexOf(query) !== -1) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  }
+
+  // Filter by tag
+  const filterSelect = document.getElementById("merchFilter");
+  if (filterSelect) {
+    filterSelect.addEventListener("change", function () {
+      const value = filterSelect.value;
+      const cards = grid.querySelectorAll(".merch-card");
+      cards.forEach((card) => {
+        const tag = card.getAttribute("data-tag");
+        if (value === "all" || tag === value) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  }
+}
+
+// Modal for merch details
+function openMerchModal(vtId, merchId) {
+  const vt = vtubers[vtId];
+  if (!vt) return;
+  const merch = vt.merch.find((m) => m.id === merchId);
+  if (!merch) return;
+
+  const modal = document.getElementById("merchModal");
+  if (!modal) return;
+
+  const titleEl = document.getElementById("modalTitleShop");
+  const priceEl = document.getElementById("modalPriceShop");
+  const stockEl = document.getElementById("stockLabel");
+  const reviewList = document.getElementById("modalReviewsShop");
+
+  if (titleEl) titleEl.textContent = merch.title;
+  if (priceEl) priceEl.textContent = "$" + merch.price.toFixed(2);
+  if (stockEl) stockEl.textContent = merch.soldOut ? "Status: sold out" : "Status: available";
+
+  if (reviewList) {
+    reviewList.innerHTML = "";
+    merch.reviews.forEach((r) => {
+      const li = document.createElement("li");
+      const strong = document.createElement("strong");
+      strong.textContent = r.name + " ";
+      const stars = "★".repeat(r.stars);
+      const textSpan = document.createElement("span");
+      textSpan.className = "muted small";
+      textSpan.textContent = " " + r.text;
+
+      li.appendChild(strong);
+      li.appendChild(document.createTextNode(stars));
+      li.appendChild(document.createElement("br"));
+      li.appendChild(textSpan);
+      reviewList.appendChild(li);
+    });
+  }
+
+  modal.style.display = "flex";
+
+  const closeBtn = document.getElementById("modalCloseShop");
+  if (closeBtn) {
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+  }
+
+  // Close when clicking outside
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  // Simple cart button behaviour
+  const cartBtn = document.getElementById("cartBtnShop");
+  if (cartBtn) {
+    cartBtn.onclick = function () {
+      alert("This is a simple demo: \"" + merch.title + "\" was added to a test cart.");
+    };
+  }
+}
+
+// Initialise everything when the DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+  setupHeroSlider();
+  populateVtuberPage();
+  populateShopPage();
 });
