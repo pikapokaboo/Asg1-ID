@@ -3,64 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VTuber Profile</title>
+  <title id="pageTitle">VTuber Profile</title>
 
+  <!-- STYLES -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/main.js"></script>
 </head>
 
-<body>
+<body class="dark">
 
-<header class="site-header">
+<header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <h1 class="brand"><a href="index.html">Indie VTuber Hub</a></h1>
     <nav class="main-nav">
       <a href="index.html">Home</a>
-      <a href="vtuber.html">Profiles</a>
+      <a href="profiles.html">VTubers</a>
       <a href="shop.html">Merch Shop</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <section class="vtuber-banner">
-    <img id="bannerImg" src="images/placeholder.png" alt="VTuber Banner">
-    <div class="banner-overlay">
-      <img id="profileImg" class="profile-img" src="images/placeholder.png" alt="VTuber Profile">
-      <div class="vtuber-meta">
-        <h2 id="vtuberName">VTuber Name</h2>
-        <p id="vtuberDesc">VTuber description goes here.</p>
-        <div id="socialLinks" class="social-links"></div>
-      </div>
+
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <img id="bannerImg" src="images/placeholder.png" alt="VTuber Banner" class="hero-img">
+    <div class="hero-text">
+      <h2 id="vtuberName">VTuber Name</h2>
+      <p id="vtuberDesc" class="muted">Indie creator description here.</p>
     </div>
   </section>
 
+  <!-- PROFILE OVERVIEW -->
+  <section class="profile-section">
+    <div class="profile-inner">
+
+      <img id="profileImg" class="profile-img" src="images/placeholder.png" alt="VTuber Profile Picture">
+
+      <div class="profile-meta">
+        <h3>About</h3>
+        <p class="muted small">Independent creator pushing their own style and streams.</p>
+        
+        <!-- SOCIAL LINKS -->
+        <ul id="socialLinks" class="social-links"></ul>
+
+        <!-- STATS ROW -->
+        <div class="stat-row">
+          <div class="stat-card"><h4>Followers</h4><p class="muted small">100k+</p></div>
+          <div class="stat-card"><h4>Clips Archived</h4><p class="muted small">50+</p></div>
+          <div class="stat-card"><h4>Live Status</h4><p id="liveStat" class="muted small">Offline</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STREAMING SCHEDULE -->
   <section class="schedule-section">
     <h3>Streaming Schedule</h3>
+    <p class="muted small">Weekly times shown by fans. Will be customised by you later.</p>
     <ul id="scheduleList"></ul>
   </section>
 
+  <!-- CLIPS GRID -->
   <section class="clips-section">
-    <h3>Clips / Videos</h3>
+    <h3>Clips & Highlights</h3>
     <input type="text" id="clipSearch" placeholder="Search clips..." class="search-bar">
     <div id="clipsGrid" class="video-grid"></div>
   </section>
 
+  <!-- MERCH PREVIEW -->
   <section class="merch-section">
-    <h3>Merch Preview</h3>
+    <h3>Merch</h3>
+    <p class="muted small">Browse exclusive indie merchandise.</p>
     <div id="merchGridVT" class="merch-grid"></div>
-    <p class="muted">Click for more details in the Shop</p>
   </section>
+
+  <!-- FAN ART SECTION -->
+  <section class="fanart-preview">
+    <h3>Fan Art & Banners</h3>
+    <p class="muted small">Community submitted promotional art.</p>
+    <div class="grid art-preview-grid">
+      <img src="images/placeholder.png" alt="fanart 1">
+      <img src="images/placeholder.png" alt="fanart 2">
+      <img src="images/placeholder.png" alt="fanart 3">
+      <img src="images/placeholder.png" alt="fanart 4">
+    </div>
+  </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="wrap">
-    <p>&copy; 2025 Indie VTuber Hub</p>
+    <p>© 2025 Indie VTuber Fan Portal</p>
+    <p class="muted small">Newly launched — community expanding.</p>
   </div>
 </footer>
 
-</main>
+<script src="js/main.js"></script>
 
 </body>
 </html>

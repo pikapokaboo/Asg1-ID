@@ -5,54 +5,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indie VTuber Hub</title>
+  <meta name="description" content="A newly launched fan portal for independent VTubers, clips, schedules, fan art and merch." />
 
   <!-- STYLES -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <meta name="description" content="Fan hub for independent VTubers, clips, schedules, fan art, and merch." />
+  <!-- SCRIPTS -->
+  <script defer src="js/main.js"></script>
 </head>
 
 <body class="dark">
 
-<header class="site-header">
+<header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <h1 class="brand"><a href="index.html">Indie VTuber Hub</a></h1>
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="profiles.html">Profiles</a>
       <a href="shop.html">Shop</a>
+      <a href="art.html">Fan Art</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
 
-  <!-- HERO BANNER -->
-  <section class="hero">
-    <img src="images/placeholder.png" alt="Hero banner WIP" class="hero-img">
-    <div class="hero-text">
-      <h2>VTubers. Clips. Merch. No Middle Depth.</h2>
-      <p class="muted">A fan-maintained portal into the indie virtual streaming scene.</p>
+  <!-- ========== HERO SLIDER (finished, newly launched feel) ========== -->
+  <section class="hero-slider">
+    <div class="slides">
+
+      <div class="slide active">
+        <img src="images/dokibird/banner.jpg" alt="VTuber banner">
+        <div class="caption">
+          <h2>Welcome to the Hub</h2>
+          <p>The index for indie creators and fan-shared chaos.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="images/sameko/banner.jpg" alt="VTuber banner">
+        <div class="caption">
+          <h2>Creator Directory</h2>
+          <p>Powered by fans, fueled by dedication.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="images/mint/banner.jpg" alt="VTuber banner">
+        <div class="caption">
+          <h2>Scheduling System</h2>
+          <p>Clip archives done, schedules up next.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="images/nimi/banner.jpg" alt="VTuber banner">
+        <div class="caption">
+          <h2>Merch Explorer</h2>
+          <p>Inventory built, cart logic soon.</p>
+        </div>
+      </div>
+
     </div>
+
+    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+    <button class="nav-btn next" onclick="nextSlide()">❯</button>
   </section>
+  <!-- =============================================================== -->
 
-  <!-- WIP NOTE -->
+  <!-- ---------- HOME INFO (completed + newly launched tone) ---------- -->
   <section class="intro">
-    <div class="wip-note">
-      <p>🚧 Indie archive updating… 👻 [some buttons & options under construction]</p>
-      <p>Thanks for your understanding :D</p>
-    </div>
-
-    <h2>⚫ Community Hub Brief</h2>
-    <p class="muted">A collab archive where indie creators get to exist without oversight from agencies.</p>
-    <p>The initial seed features 4 indie VTubers, all data is local-asset powered and UI is built to emulate a fan-portal work-in-progress without external hotlinks or copied templates.</p>
+    <h2>⚫ Community Hub</h2>
+    <p class="muted small">A fan-built index for indie VTubers, their streams, clips, fan art and merch.</p>
+    <p>This site looks polished, but it's still fresh enough to smell like newly deployed code,
+       late night commits, and zero dollars spent on sleep.</p>
   </section>
 
   <!-- FEATURED VTUBERS -->
   <section>
     <h2>🌑 Featured VTubers</h2>
     <div class="grid vtuber-list">
+
       <article class="vtuber-card">
         <img src="images/dokibird/dokibird_pfp.jpg" alt="Dokibird PFP">
         <h3>Dokibird</h3>
@@ -80,81 +114,63 @@
         <p class="small muted">Horror demon screams</p>
         <a href="vtuber.html?v=nimi" class="btn">Open Profile</a>
       </article>
-    </div>
-  </section>
 
-  <!-- CLIP TAG FILLER -->
-  <section class="clips-preview">
-    <h2>🎬 Clip Tags Trending (Filler)</h2>
-    <p class="muted small">(clips page backend pending, styling pass ongoing)</p>
-
-    <div class="grid preview-fake-clips">
-      <div class="fake-clip"><span>FPS Flickshots.exe</span></div>
-      <div class="fake-clip"><span>Ocean Bug Reports 🌊</span></div>
-      <div class="fake-clip"><span>Lo-Fi Karaoke but haunted 👻</span></div>
-      <div class="fake-clip"><span>Demon Scream Compilation 😈</span></div>
-    </div>
-  </section>
-
-  <!-- MERCH PREVIEW FILLER -->
-  <section class="merch-preview">
-    <h2>🛒 Merch Drops Preview</h2>
-    <p class="muted small">(cart logic injection pending, sold-out label experiments ongoing)</p>
-
-    <div class="grid vtuber-list">
-      <article class="merch-card">
-        <img src="images/placeholder.png" alt="Hoodie WIP">
-        <h4>Gremlin Bird Hoodie</h4>
-        <p class="sold-out">$48.00 SOLD OUT</p>
-        <span class="small muted">Dokibird</span>
-      </article>
-
-      <article class="merch-card">
-        <img src="images/placeholder.png" alt="Mug WIP">
-        <h4>Deep Sea Ceramic Mug</h4>
-        <p>$18.00</p>
-        <span class="small muted">Sameko Saba</span>
-      </article>
-
-      <article class="merch-card">
-        <img src="images/placeholder.png" alt="Poster WIP">
-        <h4>Mint Upcoming Poster</h4>
-        <p>$22.50</p>
-        <span class="small muted">Mint Fantôme</span>
-      </article>
-
-      <article class="merch-card">
-        <img src="images/placeholder.png" alt="Figure WIP">
-        <h4>Nightmare Figurine</h4>
-        <p>$65.00</p>
-        <span class="small muted">Nimi</span>
-      </article>
     </div>
   </section>
 
   <!-- FAN ART PREVIEW -->
   <section class="fanart-preview">
-    <h2>🖼 Fan Art & Banners (Preview)</h2>
-    <p class="muted small">(fan art panel loading system drafted… UX test pass incoming)</p>
-
+    <h2>🖼 Fan Art & Banners</h2>
+    <p class="muted small">Showcasing placeholder art until new submissions roll in.</p>
     <div class="grid art-preview-grid">
-      <img src="images/placeholder.png" alt="fanart1">
-      <img src="images/placeholder.png" alt="fanart2">
-      <img src="images/placeholder.png" alt="fanart3">
-      <img src="images/placeholder.png" alt="fanart4">
+      <img src="images/placeholder.png" alt="fanart placeholder">
+      <img src="images/placeholder.png" alt="fanart placeholder">
+      <img src="images/placeholder.png" alt="fanart placeholder">
+      <img src="images/placeholder.png" alt="fanart placeholder">
+    </div>
+  </section>
+
+  <!-- MERCH PREVIEW -->
+  <section class="merch-preview">
+    <h2>🛒 Merch Drops Preview</h2>
+    <p class="muted small">Cross-out prices, sold-out tags and details in the Shop page.</p>
+    <div class="grid vtuber-list">
+      <article class="merch-card">
+        <img src="images/placeholder.png" alt="merch placeholder">
+        <h4>Gremlin Bird Hoodie</h4>
+        <p class="sold-out">$48.00 <span class="flag">SOLD OUT</span></p>
+        <span class="small muted">Dokibird</span>
+      </article>
+      <article class="merch-card">
+        <img src="images/placeholder.png" alt="merch placeholder">
+        <h4>Deep Sea Mug</h4>
+        <p><del class="muted">$23.50</del> $18.00</p>
+        <span class="small muted">Sameko Saba</span>
+      </article>
+      <article class="merch-card">
+        <img src="images/placeholder.png" alt="merch placeholder">
+        <h4>Mint Poster</h4>
+        <p>$22.50 (Upcoming)</p>
+        <span class="small muted">Mint Fantôme</span>
+      </article>
+      <article class="merch-card">
+        <img src="images/placeholder.png" alt="merch placeholder">
+        <h4>Nimi Figurine</h4>
+        <p><del class="muted">$81.50</del> $65.00</p>
+        <span class="small muted">Nimi Nightmare</span>
+      </article>
     </div>
   </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="wrap">
     <p>Indie VTuber Hub © 2025</p>
-    <p class="muted small">Version 0.2.4 — Stable UI pass in progress</p>
+    <p class="muted small">v0.2.7 – freshly deployed community portal</p>
   </div>
 </footer>
-
-<script src="js/main.js"></script>
 
 </body>
 </html>
