@@ -1,5 +1,5 @@
 // VTuber data used for profiles and shop
-// To update: edit descriptions, schedules, clips and merch here.
+// To update: edit descriptions, schedules, clips, merch and fanart here.
 const vtubers = {
   dokibird: {
     name: "Dokibird",
@@ -7,10 +7,9 @@ const vtubers = {
     bg: "#1b0a0f",
     desc: "Chaotic bird VTuber known for FPS streams, memes and loud reactions.",
     links: {
-      // Replace "#" with real links when available
       YouTube: "https://www.youtube.com/Dokibird",
-      Twitch: "https://twitter.com/dokibird",
-      Twitter: "https://www.twitch.tv/dokibird",
+      Twitch: "https://www.twitch.tv/dokibird",   // fixed
+      Twitter: "https://twitter.com/dokibird",     // fixed
       TikTok: "https://www.tiktok.com/@dokibird"
     },
     clips: [
@@ -31,8 +30,9 @@ const vtubers = {
         soldOut: false,
         tag: "new",
         reviews: [
-          { name: "Lyn", text: "Very comfy and warm.", stars: 5 },
-          { name: "Eli", text: "Fits nicely and looks great.", stars: 4 }
+          { name: "Lyn",  text: "Very comfy and warm.", stars: 5 },
+          { name: "Eli",  text: "Fits nicely and looks great.", stars: 4 },
+          { name: "Skye", text: "Colors look the same as the preview.", stars: 5 }
         ]
       },
       {
@@ -42,7 +42,8 @@ const vtubers = {
         soldOut: true,
         tag: "limited",
         reviews: [
-          { name: "Kai", text: "Print quality is very sharp.", stars: 5 }
+          { name: "Kai",  text: "Print quality is very sharp.", stars: 5 },
+          { name: "Nova", text: "Looks great framed on my wall.", stars: 5 }
         ]
       },
       {
@@ -52,8 +53,21 @@ const vtubers = {
         soldOut: false,
         tag: "upcoming",
         reviews: [
-          { name: "Mira", text: "Small but detailed.", stars: 4 }
+          { name: "Mira", text: "Small but detailed.", stars: 4 },
+          { name: "Jin",  text: "Feels solid, not flimsy.", stars: 5 }
         ]
+      }
+    ],
+    fanart: [
+      {
+        title: "Controller gremlin sketch",
+        credit: "artbySky",
+        url: "" // optional: add a link to the original art
+      },
+      {
+        title: "Wings out, lobby ready",
+        credit: "pixelRin",
+        url: ""
       }
     ]
   },
@@ -84,7 +98,9 @@ const vtubers = {
         soldOut: false,
         tag: "new",
         reviews: [
-          { name: "Lyn", text: "Very cute and fits well.", stars: 5 }
+          { name: "Lyn",  text: "Very cute and fits well.", stars: 5 },
+          { name: "Ryo",  text: "Warm but not too heavy.", stars: 4 },
+          { name: "Skye", text: "Perfect for cozy streams.", stars: 5 }
         ]
       },
       {
@@ -94,7 +110,8 @@ const vtubers = {
         soldOut: false,
         tag: "upcoming",
         reviews: [
-          { name: "Tom", text: "Nice size for coffee or tea.", stars: 4 }
+          { name: "Tom", text: "Nice size for coffee or tea.", stars: 4 },
+          { name: "Mei", text: "Handle is comfortable to hold.", stars: 5 }
         ]
       },
       {
@@ -104,8 +121,21 @@ const vtubers = {
         soldOut: true,
         tag: "limited",
         reviews: [
-          { name: "Kai", text: "Sticks well and looks bright.", stars: 5 }
+          { name: "Kai", text: "Sticks well and looks bright.", stars: 5 },
+          { name: "Nia", text: "No peeling after a few weeks.", stars: 4 }
         ]
+      }
+    ],
+    fanart: [
+      {
+        title: "Blue shark cafe scene",
+        credit: "minttea_draws",
+        url: ""
+      },
+      {
+        title: "Sketchbook thumbnail art",
+        credit: "sleepyfin",
+        url: ""
       }
     ]
   },
@@ -137,7 +167,8 @@ const vtubers = {
         soldOut: false,
         tag: "new",
         reviews: [
-          { name: "Sam", text: "Very relaxing songs.", stars: 5 }
+          { name: "Sam",  text: "Very relaxing songs.", stars: 5 },
+          { name: "Jade", text: "Nice to have a physical CD.", stars: 4 }
         ]
       },
       {
@@ -147,7 +178,8 @@ const vtubers = {
         soldOut: true,
         tag: "limited",
         reviews: [
-          { name: "Nora", text: "Material feels thick and warm.", stars: 5 }
+          { name: "Nora", text: "Material feels thick and warm.", stars: 5 },
+          { name: "Rei",  text: "Print stayed clean after washing.", stars: 4 }
         ]
       },
       {
@@ -157,8 +189,21 @@ const vtubers = {
         soldOut: false,
         tag: "upcoming",
         reviews: [
-          { name: "Rin", text: "Art looks very clear.", stars: 4 }
+          { name: "Rin",   text: "Art looks very clear.", stars: 4 },
+          { name: "Avery", text: "Good size for a bedroom wall.", stars: 5 }
         ]
+      }
+    ],
+    fanart: [
+      {
+        title: "Floating ghost vocals",
+        credit: "lofibread",
+        url: ""
+      },
+      {
+        title: "Green room session",
+        credit: "softnoise",
+        url: ""
       }
     ]
   },
@@ -190,7 +235,8 @@ const vtubers = {
         soldOut: false,
         tag: "new",
         reviews: [
-          { name: "Gus", text: "Nice details on the model.", stars: 5 }
+          { name: "Gus",  text: "Nice details on the model.", stars: 5 },
+          { name: "Skye", text: "Paint looks clean with no smudges.", stars: 4 }
         ]
       },
       {
@@ -200,7 +246,8 @@ const vtubers = {
         soldOut: true,
         tag: "limited",
         reviews: [
-          { name: "Mira", text: "Looks intense on the wall.", stars: 5 }
+          { name: "Mira", text: "Looks intense on the wall.", stars: 5 },
+          { name: "Taro", text: "Dark colors show up clearly.", stars: 4 }
         ]
       },
       {
@@ -210,8 +257,21 @@ const vtubers = {
         soldOut: false,
         tag: "upcoming",
         reviews: [
-          { name: "Ada", text: "Good value for the contents.", stars: 4 }
+          { name: "Ada",  text: "Good value for the contents.", stars: 4 },
+          { name: "Nova", text: "Nice mix of items for fans.", stars: 5 }
         ]
+      }
+    ],
+    fanart: [
+      {
+        title: "Purple flame storyteller",
+        credit: "nightink",
+        url: ""
+      },
+      {
+        title: "Screaming into the void",
+        credit: "echochaser",
+        url: ""
       }
     ]
   }
@@ -280,11 +340,13 @@ function populateVtuberPage() {
   // Banner and profile images
   const bannerImg = document.getElementById("bannerImg");
   if (bannerImg) {
+    // You need to place images here: images/<id>/banner.jpg
     bannerImg.src = "images/" + id + "/banner.jpg";
   }
 
   const profileImg = document.getElementById("profileImg");
   if (profileImg) {
+    // You need to place images here: images/<id>/<id>_pfp.jpg
     profileImg.src = "images/" + id + "/" + id + "_pfp.jpg";
   }
 
@@ -295,7 +357,7 @@ function populateVtuberPage() {
   const descEl = document.getElementById("vtuberDesc");
   if (descEl) descEl.textContent = vt.desc;
 
-  // Social links
+  // Social links (styled so they don't blend into banners)
   const socialList = document.getElementById("socialLinks");
   if (socialList) {
     socialList.innerHTML = "";
@@ -307,6 +369,16 @@ function populateVtuberPage() {
       a.target = "_blank";
       a.rel = "noopener";
       a.textContent = platform;
+
+      // make readable over images
+      a.style.color = "#ffffff";
+      a.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+      a.style.padding = "4px 10px";
+      a.style.borderRadius = "999px";
+      a.style.display = "inline-block";
+      a.style.marginRight = "6px";
+      a.style.fontSize = "0.9rem";
+
       li.appendChild(a);
       socialList.appendChild(li);
     });
@@ -391,6 +463,32 @@ function populateVtuberPage() {
       card.addEventListener("click", function () {
         openMerchModal(id, item.id);
       });
+    });
+  }
+
+  // Fan art section on VTuber page
+  // Make sure vtuber.html has: <div id="fanartGrid" class="fanart-grid"></div>
+  const fanartGrid = document.getElementById("fanartGrid");
+  if (fanartGrid && vt.fanart && vt.fanart.length) {
+    fanartGrid.innerHTML = "";
+    vt.fanart.forEach((fa) => {
+      const card = document.createElement("article");
+      card.className = "fanart-card";
+
+      const title = document.createElement("h4");
+      title.textContent = fa.title;
+
+      const meta = document.createElement("p");
+      meta.className = "small muted";
+      if (fa.url && fa.url.trim() !== "") {
+        meta.innerHTML = `By ${fa.credit} — <a href="${fa.url}" target="_blank" rel="noopener">view</a>`;
+      } else {
+        meta.textContent = "By " + fa.credit;
+      }
+
+      card.appendChild(title);
+      card.appendChild(meta);
+      fanartGrid.appendChild(card);
     });
   }
 }
@@ -536,7 +634,7 @@ function openMerchModal(vtId, merchId) {
   const cartBtn = document.getElementById("cartBtnShop");
   if (cartBtn) {
     cartBtn.onclick = function () {
-      alert("This is a simple demo: \"" + merch.title + "\" was added to a test cart.");
+      alert('This is a simple demo: "' + merch.title + '" was added to a test cart.');
     };
   }
 }
