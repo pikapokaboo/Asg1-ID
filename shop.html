@@ -29,11 +29,12 @@
   <section class="page-header">
     <h2>Merch Shop</h2>
     <p class="muted small">
-      Simple browse-only merch list with a search bar, tag filter and basic review info.
+      Merch from your favourite VTubers!
     </p>
   </section>
 
   <section class="shop-controls">
+    <h2 class="visually-hidden">Merch Filter Controls</h2>
     <input type="text" id="merchSearch" placeholder="Search by item name..." class="search-bar">
     <label for="merchFilter" class="muted small">Filter by tag:</label>
     <select id="merchFilter">
@@ -45,10 +46,10 @@
   </section>
 
   <section>
-    <div id="merchGridShop" class="merch-grid">
-      <!-- populated by JS from vtubers data -->
-    </div>
+    <h2 class="visually-hidden">Merch Item Grid</h2>
+    <div id="merchGridShop" class="merch-grid"></div>
   </section>
+
 
   <!-- MERCH MODAL -->
   <div id="merchModal" class="modal">
