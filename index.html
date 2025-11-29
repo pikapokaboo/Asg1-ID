@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- META -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indie VTuber Hub</title>
 
+  <!-- STYLES -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <meta name="description" content="A fan hub featuring profiles, clips, schedules and merch of Independent VTubers." />
+  <meta name="description" content="Fan hub for independent VTubers, clips, schedules, fan art, and merch." />
 </head>
 
-<body>
+<body class="dark">
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -19,56 +21,136 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="profiles.html">Profiles</a>
-      <a href="shop.html">Merch Shop</a>
-
+      <a href="shop.html">Shop</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
+
+  <!-- HERO BANNER -->
   <section class="hero">
-    <img src="images/placeholder.png" alt="Hero Banner" class="hero-img">
+    <img src="images/placeholder.png" alt="Hero banner WIP" class="hero-img">
     <div class="hero-text">
-      <h2>Welcome to the Indie Depths</h2>
-      <p class="muted">Discover independent VTubers, clips, schedules, art & merch.</p>
+      <h2>VTubers. Clips. Merch. No Middle Depth.</h2>
+      <p class="muted">A fan-maintained portal into the indie virtual streaming scene.</p>
     </div>
   </section>
 
+  <!-- WIP NOTE -->
   <section class="intro">
-    <h2>Featured Indie VTubers</h2>
-    <p class="muted">Start by exploring 4 unique creators below</p>
+    <div class="wip-note">
+      <p>🚧 Indie archive updating… 👻 [some buttons & options under construction]</p>
+      <p>Thanks for your understanding :D</p>
+    </div>
+
+    <h2>⚫ Community Hub Brief</h2>
+    <p class="muted">A collab archive where indie creators get to exist without oversight from agencies.</p>
+    <p>The initial seed features 4 indie VTubers, all data is local-asset powered and UI is built to emulate a fan-portal work-in-progress without external hotlinks or copied templates.</p>
   </section>
 
-  <section class="grid vtuber-list">
-    <div class="vtuber-card">
-      <img src="images/dokibird/dokibird_pfp.jpg" alt="Dokibird">
-      <h3>Dokibird</h3>
-      <a href="vtuber.html?v=dokibird" class="btn">Visit Page</a>
-    </div>
+  <!-- FEATURED VTUBERS -->
+  <section>
+    <h2>🌑 Featured VTubers</h2>
+    <div class="grid vtuber-list">
+      <article class="vtuber-card">
+        <img src="images/dokibird/dokibird_pfp.jpg" alt="Dokibird PFP">
+        <h3>Dokibird</h3>
+        <p class="small muted">FPS gremlin bird chaos</p>
+        <a href="vtuber.html?v=dokibird" class="btn">Open Profile</a>
+      </article>
 
-    <div class="vtuber-card">
-      <img src="images/sameko/saba_pfp.jpg" alt="Sameko Saba">
-      <h3>Sameko Saba</h3>
-      <a href="vtuber.html?v=sameko" class="btn">Visit Page</a>
-    </div>
+      <article class="vtuber-card">
+        <img src="images/sameko/sameko_pfp.jpg" alt="Sameko Saba PFP">
+        <h3>Sameko Saba</h3>
+        <p class="small muted">Cozy games & art shark</p>
+        <a href="vtuber.html?v=sameko" class="btn">Open Profile</a>
+      </article>
 
-    <div class="vtuber-card">
-      <img src="images/mint/mint_pfp.jpg" alt="Mint Fantôme">
-      <h3>Mint Fantôme</h3>
-      <a href="vtuber.html?v=mint" class="btn">Visit Page</a>
-    </div>
+      <article class="vtuber-card">
+        <img src="images/mint/mint_pfp.jpg" alt="Mint Fantôme PFP">
+        <h3>Mint Fantôme</h3>
+        <p class="small muted">Lo-Fi Ghost Idol</p>
+        <a href="vtuber.html?v=mint" class="btn">Open Profile</a>
+      </article>
 
-    <div class="vtuber-card">
-      <img src="images/nimi/nimi_pfp.jpg" alt="Nimi Nightmare">
-      <h3>Nimi Nightmare</h3>
-      <a href="vtuber.html?v=nimi" class="btn">Visit Page</a>
+      <article class="vtuber-card">
+        <img src="images/nimi/nimi_pfp.jpg" alt="Nimi Nightmare PFP">
+        <h3>Nimi Nightmare</h3>
+        <p class="small muted">Horror demon screams</p>
+        <a href="vtuber.html?v=nimi" class="btn">Open Profile</a>
+      </article>
     </div>
   </section>
+
+  <!-- CLIP TAG FILLER -->
+  <section class="clips-preview">
+    <h2>🎬 Clip Tags Trending (Filler)</h2>
+    <p class="muted small">(clips page backend pending, styling pass ongoing)</p>
+
+    <div class="grid preview-fake-clips">
+      <div class="fake-clip"><span>FPS Flickshots.exe</span></div>
+      <div class="fake-clip"><span>Ocean Bug Reports 🌊</span></div>
+      <div class="fake-clip"><span>Lo-Fi Karaoke but haunted 👻</span></div>
+      <div class="fake-clip"><span>Demon Scream Compilation 😈</span></div>
+    </div>
+  </section>
+
+  <!-- MERCH PREVIEW FILLER -->
+  <section class="merch-preview">
+    <h2>🛒 Merch Drops Preview</h2>
+    <p class="muted small">(cart logic injection pending, sold-out label experiments ongoing)</p>
+
+    <div class="grid vtuber-list">
+      <article class="merch-card">
+        <img src="images/placeholder.png" alt="Hoodie WIP">
+        <h4>Gremlin Bird Hoodie</h4>
+        <p class="sold-out">$48.00 SOLD OUT</p>
+        <span class="small muted">Dokibird</span>
+      </article>
+
+      <article class="merch-card">
+        <img src="images/placeholder.png" alt="Mug WIP">
+        <h4>Deep Sea Ceramic Mug</h4>
+        <p>$18.00</p>
+        <span class="small muted">Sameko Saba</span>
+      </article>
+
+      <article class="merch-card">
+        <img src="images/placeholder.png" alt="Poster WIP">
+        <h4>Mint Upcoming Poster</h4>
+        <p>$22.50</p>
+        <span class="small muted">Mint Fantôme</span>
+      </article>
+
+      <article class="merch-card">
+        <img src="images/placeholder.png" alt="Figure WIP">
+        <h4>Nightmare Figurine</h4>
+        <p>$65.00</p>
+        <span class="small muted">Nimi</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAN ART PREVIEW -->
+  <section class="fanart-preview">
+    <h2>🖼 Fan Art & Banners (Preview)</h2>
+    <p class="muted small">(fan art panel loading system drafted… UX test pass incoming)</p>
+
+    <div class="grid art-preview-grid">
+      <img src="images/placeholder.png" alt="fanart1">
+      <img src="images/placeholder.png" alt="fanart2">
+      <img src="images/placeholder.png" alt="fanart3">
+      <img src="images/placeholder.png" alt="fanart4">
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>&copy; 2025 Indie VTuber Hub</p>
+    <p>Indie VTuber Hub © 2025</p>
+    <p class="muted small">Version 0.2.4 — Stable UI pass in progress</p>
   </div>
 </footer>
 

@@ -1,15 +1,14 @@
 :root {
-  --accent: #4c2aff;
-  --bg: #0d0d12;
-  --card-bg: #1b1b22;
-  --text: #e8e8ee;
-  --muted: #9ca3af;
-  --border: #2e2e38;
-  --max-width: 1100px;
-  --radius: 8px;
+  --accent: #5a3aff;
+  --bg: #0a0a0f;
+  --card-bg: #12121a;
+  --text: #e6e6ef;
+  --muted: #8b8b9f;
+  --border: #1f1f2b;
+  --radius: 10px;
 }
 
-/* Global settings */
+/* Global */
 * { box-sizing: border-box; }
 
 body {
@@ -17,165 +16,336 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+/* -------------------- HEADER / NAV -------------------- */
+.site-header {
+  background: #11111a;
+  padding: 15px 0;
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 0 18px rgba(0,0,0,0.6);
 }
 
 .wrap {
-  width: 90%;
-  max-width: var(--max-width);
+  width: 92%;
+  max-width: 1200px;
   margin: auto;
   padding: 20px 0;
-}
-
-/* Navigation Header */
-.site-header {
-  background: #1b1b25;
-  padding: 15px 0;
-  border-bottom: 2px solid var(--border);
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5px;
 }
 
 .brand a {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--text);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent);
   text-decoration: none;
-  margin-left: 10px;
 }
 
+.brand a:hover { filter: brightness(1.3); }
+
+/* Navigation links */
 .main-nav a {
   color: var(--text);
-  margin-right: 16px;
+  margin-right: 18px;
   text-decoration: none;
   font-weight: 600;
-  opacity: 0.85;
+  opacity: 0.8;
+  font-size: 16px;
 }
+
+.main-nav a:last-child { margin-right: 0; }
 
 .main-nav a:hover {
   opacity: 1;
-  text-decoration: underline;
+  text-shadow: 0 0 8px var(--accent);
+  transition: 0.2s;
 }
 
-/* Cards: VTuber/Videos/Merch */
+/* -------------------- HERO (FIXED + RICHER + GLOW) -------------------- */
+.hero {
+  position: relative;
+  text-align: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 30px rgba(90,50,255,0.25);
+  animation: heroPulse 7s infinite alternate ease-in-out;
+}
+
+@keyframes heroPulse {
+  from { box-shadow: 0 0 10px rgba(90,50,255,0.1); }
+  to   { box-shadow: 0 0 28px rgba(90,50,255,0.35); }
+}
+
+.hero-img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  filter: brightness(0.28) blur(1px);
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  padding: 12px;
+}
+
+.hero-text h2 {
+  font-size: 34px;
+  font-weight: 900;
+  margin: 0;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.hero-text p { margin-top: 6px; }
+
+/* -------------------- GRID LAYOUTS -------------------- */
 .grid,
 .video-grid,
-.merch-grid {
+.merch-grid,
+.art-preview-grid,
+.preview-fake-clips {
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
 
-.vtuber-list {
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+.vtuber-list, .vtuber-directory, .vtuber-directory,
+.merch-grid, .art-preview-grid,
+.preview-fake-clips {
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
 }
 
-.vtuber-card,
-.video-card,
-.merch-card {
+/* -------------------- CARD STYLE -------------------- */
+.vtuber-card, .video-card, .merch-card, .stat-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 15px;
+  padding: 16px;
   text-align: center;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Shared card hover */
-.vtuber-card:hover,
-.video-card:hover,
-.merch-card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 6px 22px rgba(0,0,0,0.4);
-}
-
-/* Profile thumbnails */
-.vtuber-card img {
-  width: 140px;
-  height: 140px;
+/* pfp circle fix */
+.vtuber-card img, .profile-img {
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
   border: 3px solid var(--accent);
   object-fit: cover;
 }
 
-/* Video/Merch thumbnails */
+/* banners & merch */
 .video-card img,
-.merch-card img {
+.merch-card img,
+.stat-card,
+.art-preview-grid img {
   width: 100%;
   height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
+  border-radius: var(--radius);
   border: 2px solid var(--border);
+  object-fit: cover;
 }
 
-/* Sold out */
+/* card hovers */
+.vtuber-card:hover, .video-card:hover, .merch-card:hover, .stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+/* tag flag overlay */
+.flag, .merch-card .flag {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+/* sold out */
 .sold-out {
-  color: #ff4d4d;
+  color: #ff4c6a;
   text-decoration: line-through;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 15px;
 }
 
-/* Controls */
-.search-bar {
+/* buttons */
+.btn {
+  display: inline-block;
+  background: #222230;
+  color: var(--text);
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(90,50,255,0.25);
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 20px rgba(90,50,255,0.6);
+  transition: 0.2s;
+}
+
+/* -------------------- ALREADY VISITED INDICATORS -------------------- */
+.visited-tag {
+  color: var(--accent);
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  text-shadow: 0 0 6px rgba(90,60,255,0.4);
+}
+
+/* -------------------- TEXT FILLER BLOCKS -------------------- */
+.intro, .mission, .featured, .fanart-preview,
+.schedule-section, .clips-section, .merch-section, .faq {
+  margin-top: 40px;
+  padding: 10px;
+  border-left: 3px solid var(--accent);
+  background: rgba(15,15,25,0.4);
+  border-radius: var(--radius);
+}
+
+h2, h3, h4 { margin-bottom: 10px; }
+
+/* -------------------- MERCH FILTER PANEL -------------------- */
+.filter-section {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+
+/* -------------------- INPUT/SEARCH BARS -------------------- */
+.search-bar, #merchSearch {
   width: 100%;
   padding: 12px;
-  border-radius: 6px;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: #20202a;
-  color: #fff;
-  margin-bottom: 15px;
+  background: #1a1a23;
+  color: white;
+  box-shadow: 0 0 18px rgba(0,0,0,0.4);
 }
 
-.filter-section select {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  background: #20202a;
-  color: #fff;
+.search-bar:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
-/* Modal system */
+/* -------------------- MODAL POPUP -------------------- */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(3px);
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 16px;
 }
 
 .modal-content {
-  background: #20202a;
-  padding: 24px;
-  border-radius: 12px;
+  background: #111118;
   width: 100%;
-  max-width: 380px;
-  border: 1px solid var(--border);
+  max-width: 400px;
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--accent);
   position: relative;
-  animation: fadeUp 0.2s ease-out;
+  box-shadow: 0 0 32px rgba(123,60,255,0.3);
+  animation: modalUp 0.22s ease-out;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes modalUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .modal-close {
   position: absolute;
-  right: 12px;
-  top: 8px;
-  cursor: pointer;
-  color: var(--muted);
-  font-size: 22px;
+  top: 10px;
+  right: 14px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.7;
 }
 
-/* Responsive tweaks */
+.modal-close:hover { opacity: 1; }
+
+/* merch inside modal */
+.modal-content img {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* -------------------- REVIEW STARS -------------------- */
+#modalReviewsShop li {
+  background: #1a1a23;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #252530;
+  margin-bottom: 15px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+  color:#fff;
+}
+
+/* -------------------- FOOTER -------------------- */
+.site-footer {
+  background: #06060a;
+  padding: 20px 0;
+  margin-top: 60px;
+  border-top: 2px solid var(--border);
+  box-shadow: 0 0 18px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ========================== MOBILE OPTIMIZATION ========================== */
+
 @media (max-width: 768px) {
-  .header-inner { flex-direction: column; gap: 12px; }
-  .vtuber-card img { width: 110px; height: 110px; }
+  .header-inner { flex-direction: column; gap: 14px; }
+  .main-nav a { margin-right: 0; }
+  .hero-img { height: 190px; }
+  .hero-text h2 { font-size: 24px; }
+  .wrap { width: 95%; }
+  .art-preview-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero-img { height: 150px; }
+  .hero-text h2 { font-size: 18px; }
+  .art-preview-grid { grid-template-columns: 1fr; }
+  .vtuber-card img { width: 100px; height: 100px; }
 }
