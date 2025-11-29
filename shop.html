@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Independent VTuber Merch Shop</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <h1 class="brand"><a href="index.html">Indie VTuber Hub</a></h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="vtuber.html">Profiles</a>
+      <a href="shop.html">Merch Shop</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="shop-controls">
+    <input type="text" id="merchSearch" placeholder="Search merch..." class="search-bar">
+    <label for="merchFilter" class="muted">Filter:</label>
+    <select id="merchFilter">
+      <option value="all">All</option>
+      <option value="new">New Releases</option>
+      <option value="limited">Limited</option>
+      <option value="upcoming">Upcoming</option>
+    </select>
+  </section>
+
+  <section>
+    <h2>Merch Shop</h2>
+    <div id="merchGridShop" class="merch-grid"></div>
+  </section>
+
+  <div id="merchModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="modalCloseShop">&times;</span>
+      <img id="modalImgShop" src="images/placeholder.png" alt="Merch Image">
+      <h3 id="modalTitleShop">Merch Title</h3>
+      <p id="modalDescShop">Merch description goes here.</p>
+      <p><strong id="modalPriceShop">$0.00</strong></p>
+
+      <h4>Reviews</h4>
+      <ul id="modalReviewsShop"></ul>
+
+      <button id="cartBtnShop" class="btn">Add to Cart</button>
+      <p class="muted" id="stockLabel"></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2025 Indie VTuber Hub — Fan-made Website Project</p>
+  </div>
+</footer>
+
+</body>
+</html>

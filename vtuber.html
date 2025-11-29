@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VTuber Profile</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <h1 class="brand"><a href="index.html">Indie VTuber Hub</a></h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="vtuber.html">Profiles</a>
+      <a href="shop.html">Merch Shop</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="vtuber-banner">
+    <img id="bannerImg" src="images/placeholder.png" alt="VTuber Banner">
+    <div class="banner-overlay">
+      <img id="profileImg" class="profile-img" src="images/placeholder.png" alt="VTuber Profile">
+      <div class="vtuber-meta">
+        <h2 id="vtuberName">VTuber Name</h2>
+        <p id="vtuberDesc">VTuber description goes here.</p>
+        <div id="socialLinks" class="social-links"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schedule-section">
+    <h3>Streaming Schedule</h3>
+    <ul id="scheduleList"></ul>
+  </section>
+
+  <section class="clips-section">
+    <h3>Clips / Videos</h3>
+    <input type="text" id="clipSearch" placeholder="Search clips..." class="search-bar">
+    <div id="clipsGrid" class="video-grid"></div>
+  </section>
+
+  <section class="merch-section">
+    <h3>Merch Preview</h3>
+    <div id="merchGridVT" class="merch-grid"></div>
+    <p class="muted">Click for more details in the Shop</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2025 Indie VTuber Hub</p>
+  </div>
+</footer>
+
+</main>
+
+</body>
+</html>
