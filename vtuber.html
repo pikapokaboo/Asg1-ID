@@ -28,7 +28,6 @@
 
   <!-- HERO BANNER -->
   <section class="hero hero-profile">
-    <!-- JS sets src to images/<id>/banner.jpg -->
     <img id="bannerImg" src="" alt="VTuber banner" class="hero-img">
     <div class="hero-text">
       <h2 id="vtuberName">VTuber Name</h2>
@@ -40,34 +39,30 @@
   <section class="profile-section">
     <div class="profile-inner">
 
-      <!-- JS sets src to images/<id>/<id>_pfp.jpg -->
       <img id="profileImg" class="profile-img" src="" alt="VTuber profile picture">
 
       <div class="profile-info">
         <h3>About</h3>
-        <p id="aboutText" class="muted">
-          Basic info about the creator.
-        </p>
+        <p id="aboutText" class="muted">Basic info about the creator.</p>
 
         <h4>Links</h4>
-        <ul id="socialLinks" class="social-links">
-          <!-- populated by JS -->
-        </ul>
+        <ul id="socialLinks" class="social-links"></ul>
       </div>
     </div>
+  </section>
+
+  <!-- STREAMS ONLY (Replaces Clips system, keeps container stable) -->
+  <section class="streams-section">
+    <div class="section-header">
+      <h2>Streams</h2>
+    </div>
+    <div id="streamsGrid" class="vtuber-list"></div>
   </section>
 
   <!-- SCHEDULE -->
   <section class="schedule-section">
     <h3>Schedule</h3>
     <ul id="scheduleList"></ul>
-  </section>
-
-  <!-- CLIPS / VIDEO TITLES -->
-  <section class="clips-section">
-    <h3>Clips & Stream Titles</h3>
-    <input type="text" id="clipSearch" class="search-bar" placeholder="Search by title...">
-    <div id="clipsGrid" class="video-grid"></div>
   </section>
 
   <!-- MERCH PREVIEW -->
@@ -77,7 +72,7 @@
     <div id="merchGridVT" class="merch-grid"></div>
   </section>
 
-  <!-- FAN ART SECTION -->
+  <!-- FAN ART SECTION (unchanged logic container preserved) -->
   <section class="fanart-section">
     <h3>Fan Art</h3>
     <p class="muted small">Fan works related to this creator. More are listed on the Fan Art page.</p>
@@ -85,6 +80,18 @@
   </section>
 
 </main>
+
+<!-- MERCH MODAL (if opened, now safe for streams/merch only) -->
+<div id="merchModal" class="modal">
+  <div class="modal-content">
+    <span id="modalCloseShop" class="modal-close">&times;</span>
+    <h2 id="modalTitleShop">Item Title</h2>
+    <p id="modalPriceShop">$0.00</p>
+    <p id="stockLabel">Status: --</p>
+    <ul id="modalReviewsShop"></ul>
+    <button id="cartBtnShop" class="btn">Add to cart</button>
+  </div>
+</div>
 
 <footer class="site-footer">
   <div class="wrap">

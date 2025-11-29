@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indie VTuber Hub</title>
-  <meta name="description" content="Fan-made hub for independent VTubers, their clips, fan art, and merch." />
+  <meta name="description" content="Fan-made hub for independent VTubers, their streams, fan art, and merch." />
 
   <!-- STYLES -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -13,15 +13,23 @@
 
   <!-- SCRIPT -->
   <script defer src="js/main.js"></script>
+
+  <style>
+    /* Extra safety for responsiveness */
+    .slides { display: flex; }
+    .slide { flex-shrink: 0; width: 100%; }
+    .video-card iframe { border-radius: var(--radius); }
+    img { max-width: 100%; height: auto; }
+  </style>
 </head>
 
 <body class="dark">
 
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
-    <h1 class="brand"><a href="index.html">Indie VTuber Hub</a></h1>
+    <h1 class="brand"><a href="#top">Indie VTuber Hub</a></h1>
     <nav class="main-nav">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="profiles.html">Profiles</a>
       <a href="art.html">Fan Art</a>
       <a href="shop.html">Shop</a>
@@ -47,15 +55,15 @@
         <img src="images/sameko/banner.jpg" alt="Sameko Saba banner">
         <div class="caption">
           <h2>Creator Profiles</h2>
-          <p>Quick links to streams, clips and schedules.</p>
+          <p>Quick links to YouTube LIVE streams and schedules.</p>
         </div>
       </div>
 
       <div class="slide">
         <img src="images/mint/banner.jpg" alt="Mint Fantôme banner">
         <div class="caption">
-          <h2>Fan Art & Banners</h2>
-          <p>Community work collected in one gallery.</p>
+          <h2>Fan Art Collection</h2>
+          <p>Community artwork grouped by creators.</p>
         </div>
       </div>
 
@@ -63,7 +71,7 @@
         <img src="images/nimi/banner.jpg" alt="Nimi Nightmare banner">
         <div class="caption">
           <h2>Merch Corner</h2>
-          <p>Simple merch browser with reviews.</p>
+          <p>Merch previews and community reviews.</p>
         </div>
       </div>
 
@@ -77,8 +85,8 @@
   <section class="home-section">
     <h2>About Indie VTuber Hub</h2>
     <p class="muted small">
-      A small fan-made site that keeps everything for a few independent VTubers in one place:
-      their main links, a short schedule, fan art, clips and basic merch info.
+      A fan-built site that keeps key content for indie VTubers in one place —  
+      schedules, YouTube LIVE streams, fan art, and merch snapshots.
     </p>
   </section>
 
@@ -89,6 +97,7 @@
       <a href="profiles.html" class="link-pill">View all profiles →</a>
     </div>
     <div class="grid vtuber-list">
+
       <article class="vtuber-card">
         <img src="images/dokibird/dokibird_pfp.jpg" alt="Dokibird profile picture">
         <h3>Dokibird</h3>
@@ -99,51 +108,93 @@
       <article class="vtuber-card">
         <img src="images/sameko/sameko_pfp.jpg" alt="Sameko Saba profile picture">
         <h3>Sameko Saba</h3>
-        <p class="small muted">Art streams with a shark theme.</p>
+        <p class="small muted">Calm art and chatting streams.</p>
         <a href="vtuber.html?v=sameko" class="btn">Open profile</a>
       </article>
 
       <article class="vtuber-card">
         <img src="images/mint/mint_pfp.jpg" alt="Mint Fantôme profile picture">
         <h3>Mint Fantôme</h3>
-        <p class="small muted">Lo-fi ghost vocals and games.</p>
+        <p class="small muted">Ghost lo-fi vocals and chill games.</p>
         <a href="vtuber.html?v=mint" class="btn">Open profile</a>
       </article>
 
       <article class="vtuber-card">
-        <img src="images/nimi/nimi_pfp.jpg" alt="Nimi Nightmare profile picture">
+        <img src="images/nimi/nimi_pfp.jpg" alt="Nimi profile picture">
         <h3>Nimi Nightmare</h3>
-        <p class="small muted">Horror, stories and jump scares.</p>
+        <p class="small muted">Horror games and stories.</p>
         <a href="vtuber.html?v=nimi" class="btn">Open profile</a>
       </article>
+
     </div>
   </section>
 
-  <!-- FAN ART SNIPPET (links to art.html) -->
+  <!-- STREAMS ONLY SECTION -->
+  <section class="home-section streams-section">
+    <div class="section-header">
+      <h2>Live YouTube Streams</h2>
+    </div>
+    <div class="grid vtuber-directory video-grid" id="streamsGridPreview">
+
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe 
+            src="https://www.youtube.com/embed/4tXUcSeIvF0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <h4>【DOKISMP MINECRAFT】No war crimes【Dokibird】</h4>
+      </article>
+
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe 
+            src="https://www.youtube.com/embed/DKhRLkhlQDc"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <h4>【Leaf it Alone】lost my leafin' mind</h4>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FAN ART SNIPPET -->
   <section class="home-section">
     <div class="section-header">
       <h2>Fan Art Preview</h2>
       <a href="art.html" class="link-pill">Open fan art gallery →</a>
     </div>
-    <p class="muted small">Some works from the community, grouped per creator.</p>
+    <p class="muted small">Recent fan works:</p>
     <div class="grid art-preview-grid">
-      <!-- You can replace these with real thumbnails if you have them -->
-      <div class="fanart-card">
-        <h4>Controller sketch</h4>
-        <p class="small muted">Dokibird themed art sample.</p>
-      </div>
-      <div class="fanart-card">
-        <h4>Shark cafe scene</h4>
-        <p class="small muted">Sameko themed art sample.</p>
-      </div>
-      <div class="fanart-card">
-        <h4>Floating ghost vocal</h4>
-        <p class="small muted">Mint themed art sample.</p>
-      </div>
-      <div class="fanart-card">
-        <h4>Purple horror frame</h4>
-        <p class="small muted">Nimi themed art sample.</p>
-      </div>
+
+      <!-- REAL THUMBNAILS WIRED FROM DATA -->
+      <article class="fanart-card">
+        <img src="images/dokibird/fanart/doki1.png" alt="cheese!📸💛" class="modal-img">
+        <h4>cheese!📸💛</h4>
+        <p class="small muted">Dokibird — by myfroggythighs</p>
+      </article>
+
+      <article class="fanart-card">
+        <img src="images/dokibird/fanart/doki2.jpg" alt="#DokiGallery" class="modal-img">
+        <h4>#DokiGallery</h4>
+        <p class="small muted">Dokibird — by Smol_DrawingBun</p>
+      </article>
+
+      <article class="fanart-card">
+        <img src="images/sameko/fanart/saba1.jpg" alt="Happy Halloween🎃🐟💙" class="modal-img">
+        <h4>Happy Halloween🎃🐟💙</h4>
+        <p class="small muted">Sameko — by cNERUc</p>
+      </article>
+
+      <article class="fanart-card">
+        <img src="images/mint/fanart/mint1.jpg" alt="❄️" class="modal-img">
+        <h4>❄️</h4>
+        <p class="small muted">Mint — by _yuyue_</p>
+      </article>
+
     </div>
   </section>
 
@@ -153,30 +204,33 @@
       <h2>Shop Snapshot</h2>
       <a href="shop.html" class="link-pill">Go to merch shop →</a>
     </div>
-    <p class="muted small">
-      The shop page includes search, tag filters and a simple details panel with reviews.
-    </p>
+    <p class="muted small">Merch preview:</p>
     <div class="grid merch-grid">
+
       <article class="merch-card">
         <h4>Gremlin Bird Hoodie</h4>
         <p>$48.00</p>
         <p class="small muted">By Dokibird</p>
       </article>
+
       <article class="merch-card">
         <h4>Shark Beanie</h4>
         <p>$24.00</p>
         <p class="small muted">By Sameko Saba</p>
       </article>
+
       <article class="merch-card">
         <h4>Phantom CD Album</h4>
         <p>$13.00</p>
         <p class="small muted">By Mint Fantôme</p>
       </article>
+
       <article class="merch-card">
         <h4>Nimi Figurine</h4>
         <p>$65.00</p>
         <p class="small muted">By Nimi Nightmare</p>
       </article>
+
     </div>
   </section>
 
@@ -185,7 +239,6 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>Indie VTuber Hub © 2025</p>
-    <p class="muted small">Simple fan-built project.</p>
   </div>
 </footer>
 

@@ -24,6 +24,11 @@ body.dark {
   color: var(--text);
 }
 
+/* Fix grid collapse + globals preserved */
+.fanart-grid, .merch-grid, .video-grid, .video-card, .fanart-card {
+  width: 100%;
+}
+
 /* Layout wrapper */
 .wrap {
   max-width: 1100px;
@@ -110,6 +115,7 @@ a:hover {
   padding: 1rem 0;
   background: #050509;
   font-size: 0.85rem;
+  color: var(--muted);
 }
 
 /* Sections */
@@ -205,7 +211,7 @@ a:hover {
   right: 0.6rem;
 }
 
-/* Grid layouts */
+/* Grid layouts preserved */
 .grid {
   display: grid;
   gap: 1rem;
@@ -247,7 +253,7 @@ a:hover {
   margin: 0 0 0.3rem;
 }
 
-/* Profile layout */
+/* Profile layout preserved */
 .profile-inner {
   display: flex;
   flex-wrap: wrap;
@@ -270,7 +276,7 @@ a:hover {
   margin-top: 0;
 }
 
-/* Social links */
+/* Social links preserved */
 .social-links {
   list-style: none;
   margin: 0.5rem 0 0;
@@ -287,7 +293,7 @@ a:hover {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* Schedule list */
+/* Schedule list preserved */
 .schedule-section ul {
   list-style: none;
   padding-left: 0;
@@ -326,7 +332,7 @@ a:hover {
   opacity: 0.7;
 }
 
-/* Shop controls */
+/* Shop controls preserved */
 .shop-controls {
   display: flex;
   flex-wrap: wrap;
@@ -335,7 +341,7 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-/* Search inputs */
+/* Search inputs preserved and strengthened */
 .search-bar,
 #merchSearch {
   flex: 1;
@@ -362,7 +368,7 @@ select {
   color: var(--text);
 }
 
-/* Hero used on profile pages */
+/* Hero used on profile pages preserved */
 .hero-profile {
   margin-top: 1.5rem;
   border-radius: 1rem;
@@ -387,7 +393,7 @@ select {
   border-radius: 0.8rem;
 }
 
-/* Modal */
+/* Modal preserved */
 .modal {
   display: none;
   position: fixed;
@@ -424,7 +430,7 @@ select {
   margin-bottom: 0.7rem;
 }
 
-/* Reviews */
+/* Reviews preserved */
 #modalReviewsShop {
   list-style: none;
   padding-left: 0;
@@ -435,27 +441,23 @@ select {
   margin-bottom: 0.5rem;
 }
 
-/* Responsive */
+/* Responsive preserved */
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-
   .main-nav a {
     margin-left: 0;
     margin-right: 0.8rem;
   }
-
   .slides {
     height: 200px;
   }
-
   .profile-inner {
     flex-direction: column;
   }
-
   .wrap {
     max-width: 100%;
     padding: 0 0.75rem 2rem;
@@ -466,15 +468,12 @@ select {
   .slides {
     height: 170px;
   }
-
   .caption h2 {
-    font-size: 1.1rem;
+    font-size: 0.82rem;
   }
-
   .hero-profile .hero-img {
     height: 180px;
   }
-
   .vtuber-card img {
     width: 70px;
     height: 70px;
