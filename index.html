@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic meta -->
+  <!-- META -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indie VTuber Hub</title>
-  <meta name="description" content="Indie VTuber Hub is a simple fan-made website that collects info, clips and merch for independent VTubers.">
+  <meta name="description" content="Fan-made hub for independent VTubers, their clips, fan art, and merch." />
 
-  <!-- Styles -->
+  <!-- STYLES -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Scripts -->
+  <!-- SCRIPT -->
   <script defer src="js/main.js"></script>
 </head>
 
@@ -21,8 +21,9 @@
   <div class="wrap header-inner">
     <h1 class="brand"><a href="index.html">Indie VTuber Hub</a></h1>
     <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="profiles.html">Profiles</a>
+      <a href="art.html">Fan Art</a>
       <a href="shop.html">Shop</a>
     </nav>
   </div>
@@ -30,115 +31,161 @@
 
 <main class="wrap">
 
-  <!-- Hero slider with VTuber banners -->
+  <!-- HERO SLIDER -->
   <section class="hero-slider">
     <div class="slides">
-      <!-- Slide 1: Dokibird -->
+
       <div class="slide active">
         <img src="images/dokibird/banner.jpg" alt="Dokibird banner">
         <div class="caption">
-          <h2>Dokibird</h2>
-          <p>High energy streams and FPS chaos.</p>
+          <h2>Welcome to the Hub</h2>
+          <p>Independent VTubers, one place to browse.</p>
         </div>
       </div>
 
-      <!-- Slide 2: Sameko -->
       <div class="slide">
         <img src="images/sameko/banner.jpg" alt="Sameko Saba banner">
         <div class="caption">
-          <h2>Sameko Saba</h2>
-          <p>Cozy art, calm vibes, shark energy.</p>
+          <h2>Creator Profiles</h2>
+          <p>Quick links to streams, clips and schedules.</p>
         </div>
       </div>
 
-      <!-- Slide 3: Mint -->
       <div class="slide">
         <img src="images/mint/banner.jpg" alt="Mint Fantôme banner">
         <div class="caption">
-          <h2>Mint Fantôme</h2>
-          <p>Soft lo-fi songs with a ghostly twist.</p>
+          <h2>Fan Art & Banners</h2>
+          <p>Community work collected in one gallery.</p>
         </div>
       </div>
 
-      <!-- Slide 4: Nimi -->
       <div class="slide">
         <img src="images/nimi/banner.jpg" alt="Nimi Nightmare banner">
         <div class="caption">
-          <h2>Nimi Nightmare</h2>
-          <p>Horror stories, loud screams and lore.</p>
+          <h2>Merch Corner</h2>
+          <p>Simple merch browser with reviews.</p>
         </div>
       </div>
+
     </div>
 
-    <button class="nav-btn prev" onclick="prevSlide()" aria-label="Previous banner">❮</button>
-    <button class="nav-btn next" onclick="nextSlide()" aria-label="Next banner">❯</button>
+    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+    <button class="nav-btn next" onclick="nextSlide()">❯</button>
   </section>
 
-  <!-- Intro section -->
-  <section class="intro">
-    <h2>About This Hub</h2>
-    <p class="muted">
-      This site is a small fan project that collects information about a few independent VTubers.
-      It focuses on basic profiles, stream schedules, video clips and simple merch listings.
-    </p>
-    <p class="muted">
-      The goal is to give new viewers an easy way to see who they are, what they do,
-      and where to follow or support them.
+  <!-- ABOUT SNIPPET -->
+  <section class="home-section">
+    <h2>About Indie VTuber Hub</h2>
+    <p class="muted small">
+      A small fan-made site that keeps everything for a few independent VTubers in one place:
+      their main links, a short schedule, fan art, clips and basic merch info.
     </p>
   </section>
 
-  <!-- Featured VTubers -->
-  <section>
-    <h2>Featured VTubers</h2>
+  <!-- PROFILES SNIPPET -->
+  <section class="home-section">
+    <div class="section-header">
+      <h2>Featured Profiles</h2>
+      <a href="profiles.html" class="link-pill">View all profiles →</a>
+    </div>
     <div class="grid vtuber-list">
       <article class="vtuber-card">
         <img src="images/dokibird/dokibird_pfp.jpg" alt="Dokibird profile picture">
         <h3>Dokibird</h3>
-        <p class="small muted">FPS, memes and loud moments.</p>
-        <a href="vtuber.html?v=dokibird" class="btn">View Profile</a>
+        <p class="small muted">FPS, memes and loud reactions.</p>
+        <a href="vtuber.html?v=dokibird" class="btn">Open profile</a>
       </article>
 
       <article class="vtuber-card">
         <img src="images/sameko/sameko_pfp.jpg" alt="Sameko Saba profile picture">
         <h3>Sameko Saba</h3>
-        <p class="small muted">Drawing streams and relaxing games.</p>
-        <a href="vtuber.html?v=sameko" class="btn">View Profile</a>
+        <p class="small muted">Art streams with a shark theme.</p>
+        <a href="vtuber.html?v=sameko" class="btn">Open profile</a>
       </article>
 
       <article class="vtuber-card">
         <img src="images/mint/mint_pfp.jpg" alt="Mint Fantôme profile picture">
         <h3>Mint Fantôme</h3>
-        <p class="small muted">Lo-fi music and soft singing.</p>
-        <a href="vtuber.html?v=mint" class="btn">View Profile</a>
+        <p class="small muted">Lo-fi ghost vocals and games.</p>
+        <a href="vtuber.html?v=mint" class="btn">Open profile</a>
       </article>
 
       <article class="vtuber-card">
         <img src="images/nimi/nimi_pfp.jpg" alt="Nimi Nightmare profile picture">
         <h3>Nimi Nightmare</h3>
-        <p class="small muted">Horror streams and storytelling.</p>
-        <a href="vtuber.html?v=nimi" class="btn">View Profile</a>
+        <p class="small muted">Horror, stories and jump scares.</p>
+        <a href="vtuber.html?v=nimi" class="btn">Open profile</a>
       </article>
     </div>
   </section>
 
-  <!-- Simple art / banner info section (no images, only text) -->
-  <section class="intro">
-    <h2>Art & Banners</h2>
-    <p class="muted">
-      Each VTuber banner at the top of this page is stored in:
-      <code>images/[vtuber_id]/banner.jpg</code>.
+  <!-- FAN ART SNIPPET (links to art.html) -->
+  <section class="home-section">
+    <div class="section-header">
+      <h2>Fan Art Preview</h2>
+      <a href="art.html" class="link-pill">Open fan art gallery →</a>
+    </div>
+    <p class="muted small">Some works from the community, grouped per creator.</p>
+    <div class="grid art-preview-grid">
+      <!-- You can replace these with real thumbnails if you have them -->
+      <div class="fanart-card">
+        <h4>Controller sketch</h4>
+        <p class="small muted">Dokibird themed art sample.</p>
+      </div>
+      <div class="fanart-card">
+        <h4>Shark cafe scene</h4>
+        <p class="small muted">Sameko themed art sample.</p>
+      </div>
+      <div class="fanart-card">
+        <h4>Floating ghost vocal</h4>
+        <p class="small muted">Mint themed art sample.</p>
+      </div>
+      <div class="fanart-card">
+        <h4>Purple horror frame</h4>
+        <p class="small muted">Nimi themed art sample.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP SNIPPET -->
+  <section class="home-section">
+    <div class="section-header">
+      <h2>Shop Snapshot</h2>
+      <a href="shop.html" class="link-pill">Go to merch shop →</a>
+    </div>
+    <p class="muted small">
+      The shop page includes search, tag filters and a simple details panel with reviews.
     </p>
-    <p class="muted">
-      Fan art and extra graphics can be added later in another section or a new page
-      by following the same folder structure.
-    </p>
+    <div class="grid merch-grid">
+      <article class="merch-card">
+        <h4>Gremlin Bird Hoodie</h4>
+        <p>$48.00</p>
+        <p class="small muted">By Dokibird</p>
+      </article>
+      <article class="merch-card">
+        <h4>Shark Beanie</h4>
+        <p>$24.00</p>
+        <p class="small muted">By Sameko Saba</p>
+      </article>
+      <article class="merch-card">
+        <h4>Phantom CD Album</h4>
+        <p>$13.00</p>
+        <p class="small muted">By Mint Fantôme</p>
+      </article>
+      <article class="merch-card">
+        <h4>Nimi Figurine</h4>
+        <p>$65.00</p>
+        <p class="small muted">By Nimi Nightmare</p>
+      </article>
+    </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>Indie VTuber Hub &copy; 2025</p>
+    <p>Indie VTuber Hub © 2025</p>
+    <p class="muted small">Simple fan-built project.</p>
   </div>
 </footer>
 

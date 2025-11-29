@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merch Shop</title>
+  <title>Independent VTuber Merch Shop</title>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Scripts -->
   <script defer src="js/main.js"></script>
 </head>
 
@@ -22,6 +18,7 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="profiles.html">Profiles</a>
+      <a href="art.html">Fan Art</a>
       <a href="shop.html" class="active">Shop</a>
     </nav>
   </div>
@@ -29,48 +26,44 @@
 
 <main class="wrap">
 
-  <!-- Simple hero for shop -->
-  <section class="hero hero-simple">
-    <div class="hero-text">
-      <h2>Merch Catalog</h2>
-      <p class="muted">
-        Browse items linked to each VTuber. Some items are marked as sold out to show stock changes.
-      </p>
-    </div>
+  <section class="page-header">
+    <h2>Merch Shop</h2>
+    <p class="muted small">
+      Simple browse-only merch list with a search bar, tag filter and basic review info.
+    </p>
   </section>
 
-  <!-- Filters -->
-  <section class="filter-section">
-    <input type="text" id="merchSearch" class="search-bar" placeholder="Search by item name">
+  <section class="shop-controls">
+    <input type="text" id="merchSearch" placeholder="Search by item name..." class="search-bar">
+    <label for="merchFilter" class="muted small">Filter by tag:</label>
     <select id="merchFilter">
-      <option value="all">All tags</option>
-      <option value="new">New</option>
+      <option value="all">All</option>
+      <option value="new">New releases</option>
       <option value="limited">Limited</option>
       <option value="upcoming">Upcoming</option>
     </select>
   </section>
 
-  <!-- Merch grid filled by JavaScript -->
   <section>
     <div id="merchGridShop" class="merch-grid">
-      <!-- Merch cards are added here by JavaScript -->
+      <!-- populated by JS from vtubers data -->
     </div>
   </section>
 
-  <!-- Merch detail modal -->
+  <!-- MERCH MODAL -->
   <div id="merchModal" class="modal">
     <div class="modal-content">
-      <button id="modalCloseShop" class="modal-close" aria-label="Close">&times;</button>
-      <h3 id="modalTitleShop">Merch title</h3>
+      <span class="modal-close" id="modalCloseShop">&times;</span>
+      <!-- Optional image: you can point this to a real merch image later -->
+      <img id="modalImgShop" src="images/merch/default.jpg" alt="Merch item" class="modal-img">
+      <h3 id="modalTitleShop">Item title</h3>
       <p id="modalPriceShop"></p>
-      <p id="stockLabel" class="muted"></p>
-
-      <button id="cartBtnShop" class="btn">Add to Cart</button>
 
       <h4>Reviews</h4>
-      <ul id="modalReviewsShop" class="review-list">
-        <!-- Reviews are added here by JavaScript -->
-      </ul>
+      <ul id="modalReviewsShop"></ul>
+
+      <button id="cartBtnShop" class="btn">Add to cart (demo)</button>
+      <p class="muted small" id="stockLabel"></p>
     </div>
   </div>
 
@@ -78,7 +71,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>Indie VTuber Hub &copy; 2025</p>
+    <p>&copy; 2025 Indie VTuber Hub</p>
   </div>
 </footer>
 

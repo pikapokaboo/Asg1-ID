@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="pageTitle">VTuber Profile</title>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Scripts -->
   <script defer src="js/main.js"></script>
 </head>
 
@@ -22,6 +18,7 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="profiles.html">Profiles</a>
+      <a href="art.html">Fan Art</a>
       <a href="shop.html">Shop</a>
     </nav>
   </div>
@@ -29,64 +26,70 @@
 
 <main class="wrap">
 
-  <!-- VTuber banner and basic info -->
-  <section class="vtuber-banner">
-    <img id="bannerImg" src="" alt="VTuber banner">
-    <div class="banner-overlay">
+  <!-- HERO BANNER -->
+  <section class="hero hero-profile">
+    <!-- JS sets src to images/<id>/banner.jpg -->
+    <img id="bannerImg" src="" alt="VTuber banner" class="hero-img">
+    <div class="hero-text">
+      <h2 id="vtuberName">VTuber Name</h2>
+      <p id="vtuberDesc" class="muted">Short description.</p>
+    </div>
+  </section>
+
+  <!-- PROFILE OVERVIEW -->
+  <section class="profile-section">
+    <div class="profile-inner">
+
+      <!-- JS sets src to images/<id>/<id>_pfp.jpg -->
       <img id="profileImg" class="profile-img" src="" alt="VTuber profile picture">
-      <div class="vtuber-meta">
-        <h2 id="vtuberName">VTuber Name</h2>
-        <p id="vtuberDesc" class="muted">
-          <!-- Filled by JavaScript based on vtuber id in the URL -->
+
+      <div class="profile-info">
+        <h3>About</h3>
+        <p id="aboutText" class="muted">
+          Basic info about the creator.
         </p>
+
+        <h4>Links</h4>
         <ul id="socialLinks" class="social-links">
-          <!-- Social links are added here by JavaScript -->
+          <!-- populated by JS -->
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Streaming schedule -->
+  <!-- SCHEDULE -->
   <section class="schedule-section">
-    <h3>Streaming Schedule</h3>
-    <p class="muted small">Times are listed in a basic text format and can be adjusted per VTuber.</p>
-    <ul id="scheduleList" class="schedule-list">
-      <!-- Schedule items are added here by JavaScript -->
-    </ul>
+    <h3>Schedule</h3>
+    <ul id="scheduleList"></ul>
   </section>
 
-  <!-- Clips / videos -->
+  <!-- CLIPS / VIDEO TITLES -->
   <section class="clips-section">
-    <h3>Clips & Video Titles</h3>
-    <input type="text" id="clipSearch" class="search-bar" placeholder="Filter clips by title">
-    <div id="clipsGrid" class="video-grid">
-      <!-- Clip cards are added here by JavaScript -->
-    </div>
+    <h3>Clips & Stream Titles</h3>
+    <input type="text" id="clipSearch" class="search-bar" placeholder="Search by title...">
+    <div id="clipsGrid" class="video-grid"></div>
   </section>
 
-  <section class="fanart-section">
-    <h3>🎨 Fan Art</h3>
-    <p class="small muted">Celebrating community creations.</p>
-    <div id="fanartGrid" class="fanart-grid"></div>
-  </section>
-
-
-  <!-- Merch preview for this VTuber -->
+  <!-- MERCH PREVIEW -->
   <section class="merch-section">
     <h3>Merch Preview</h3>
-    <p class="muted small">
-      This area shows items related to this creator. The full list can be seen on the shop page.
-    </p>
-    <div id="merchGridVT" class="merch-grid">
-      <!-- Small merch cards are added here by JavaScript -->
-    </div>
+    <p class="muted small">Some of the items for this creator. Full details are on the Shop page.</p>
+    <div id="merchGridVT" class="merch-grid"></div>
+  </section>
+
+  <!-- FAN ART SECTION -->
+  <section class="fanart-section">
+    <h3>Fan Art</h3>
+    <p class="muted small">Fan works related to this creator. More are listed on the Fan Art page.</p>
+    <div id="fanartGrid" class="fanart-grid"></div>
   </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>Indie VTuber Hub &copy; 2025</p>
+    <p>© 2025 Indie VTuber Hub</p>
+    <p class="muted small">Profile page uses local data for each creator.</p>
   </div>
 </footer>
 

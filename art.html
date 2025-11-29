@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan Art Gallery</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="dark">
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <h1 class="brand"><a href="index.html">Indie VTuber Hub</a></h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="art.html" class="active">Fan Art</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="page-header">
+    <h2>Fan Art & Banners</h2>
+    <p class="muted small">
+      Text-based gallery using the same data as the VTuber pages. Links can be filled in to point to original artists.
+    </p>
+  </section>
+
+  <section>
+    <div id="artGrid" class="fanart-grid">
+      <!-- Filled by JS using vtubers[*].fanart -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Community-focused fan art listing. Images can be added later if needed.</p>
+  </div>
+</footer>
+
+</body>
+</html>

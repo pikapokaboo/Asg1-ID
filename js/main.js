@@ -1,5 +1,4 @@
-// VTuber data used for profiles and shop
-// To update: edit descriptions, schedules, clips, merch and fanart here.
+// VTuber data reused by profiles, vtuber pages, shop and fan art
 const vtubers = {
   dokibird: {
     name: "Dokibird",
@@ -8,8 +7,8 @@ const vtubers = {
     desc: "Chaotic bird VTuber known for FPS streams, memes and loud reactions.",
     links: {
       YouTube: "https://www.youtube.com/Dokibird",
-      Twitch: "https://www.twitch.tv/dokibird",   // fixed
-      Twitter: "https://twitter.com/dokibird",     // fixed
+      Twitch: "https://www.twitch.tv/dokibird",
+      Twitter: "https://twitter.com/dokibird",
       TikTok: "https://www.tiktok.com/@dokibird"
     },
     clips: [
@@ -59,16 +58,8 @@ const vtubers = {
       }
     ],
     fanart: [
-      {
-        title: "Controller gremlin sketch",
-        credit: "artbySky",
-        url: "" // optional: add a link to the original art
-      },
-      {
-        title: "Wings out, lobby ready",
-        credit: "pixelRin",
-        url: ""
-      }
+      { title: "Controller gremlin sketch", credit: "artbySky", url: "" },
+      { title: "Wings out, lobby ready",     credit: "pixelRin", url: "" }
     ]
   },
 
@@ -80,6 +71,7 @@ const vtubers = {
     links: {
       YouTube: "https://www.youtube.com/@SamekoSaba",
       Twitter: "https://x.com/samekosaba"
+      // No Twitch key because she does not use Twitch
     },
     clips: [
       "Chill drawing session",
@@ -127,16 +119,8 @@ const vtubers = {
       }
     ],
     fanart: [
-      {
-        title: "Blue shark cafe scene",
-        credit: "minttea_draws",
-        url: ""
-      },
-      {
-        title: "Sketchbook thumbnail art",
-        credit: "sleepyfin",
-        url: ""
-      }
+      { title: "Blue shark cafe scene",       credit: "minttea_draws", url: "" },
+      { title: "Sketchbook thumbnail art",    credit: "sleepyfin",     url: "" }
     ]
   },
 
@@ -167,7 +151,7 @@ const vtubers = {
         soldOut: false,
         tag: "new",
         reviews: [
-          { name: "Sam",  text: "Very relaxing songs.", stars: 5 },
+          { name: "Sam",  text: "Very relaxing songs.",     stars: 5 },
           { name: "Jade", text: "Nice to have a physical CD.", stars: 4 }
         ]
       },
@@ -189,22 +173,14 @@ const vtubers = {
         soldOut: false,
         tag: "upcoming",
         reviews: [
-          { name: "Rin",   text: "Art looks very clear.", stars: 4 },
+          { name: "Rin",   text: "Art looks very clear.",        stars: 4 },
           { name: "Avery", text: "Good size for a bedroom wall.", stars: 5 }
         ]
       }
     ],
     fanart: [
-      {
-        title: "Floating ghost vocals",
-        credit: "lofibread",
-        url: ""
-      },
-      {
-        title: "Green room session",
-        credit: "softnoise",
-        url: ""
-      }
+      { title: "Floating ghost vocals", credit: "lofibread",  url: "" },
+      { title: "Green room session",    credit: "softnoise",  url: "" }
     ]
   },
 
@@ -235,7 +211,7 @@ const vtubers = {
         soldOut: false,
         tag: "new",
         reviews: [
-          { name: "Gus",  text: "Nice details on the model.", stars: 5 },
+          { name: "Gus",  text: "Nice details on the model.",   stars: 5 },
           { name: "Skye", text: "Paint looks clean with no smudges.", stars: 4 }
         ]
       },
@@ -246,8 +222,8 @@ const vtubers = {
         soldOut: true,
         tag: "limited",
         reviews: [
-          { name: "Mira", text: "Looks intense on the wall.", stars: 5 },
-          { name: "Taro", text: "Dark colors show up clearly.", stars: 4 }
+          { name: "Mira", text: "Looks intense on the wall.",    stars: 5 },
+          { name: "Taro", text: "Dark colors show up clearly.",  stars: 4 }
         ]
       },
       {
@@ -258,32 +234,24 @@ const vtubers = {
         tag: "upcoming",
         reviews: [
           { name: "Ada",  text: "Good value for the contents.", stars: 4 },
-          { name: "Nova", text: "Nice mix of items for fans.", stars: 5 }
+          { name: "Nova", text: "Nice mix of items for fans.",  stars: 5 }
         ]
       }
     ],
     fanart: [
-      {
-        title: "Purple flame storyteller",
-        credit: "nightink",
-        url: ""
-      },
-      {
-        title: "Screaming into the void",
-        credit: "echochaser",
-        url: ""
-      }
+      { title: "Purple flame storyteller", credit: "nightink",   url: "" },
+      { title: "Screaming into the void",  credit: "echochaser", url: "" }
     ]
   }
 };
 
-// Helper: read a query string key from the URL
+// Helper: read query parameter
 function getQueryParam(key) {
   const params = new URLSearchParams(window.location.search);
   return params.get(key);
 }
 
-// Set up hero slider on the index page
+// HERO SLIDER (index.html)
 function setupHeroSlider() {
   const slider = document.querySelector(".hero-slider");
   if (!slider) return;
@@ -299,7 +267,6 @@ function setupHeroSlider() {
     slides[currentIndex].classList.add("active");
   }
 
-  // Expose functions for buttons
   window.nextSlide = function () {
     const next = (currentIndex + 1) % slides.length;
     showSlide(next);
@@ -310,75 +277,60 @@ function setupHeroSlider() {
     showSlide(prev);
   };
 
-  // Auto rotate
   setInterval(() => {
     window.nextSlide();
   }, 7000);
 }
 
-// Fill VTuber profile page
+// VTUBER PROFILE PAGE (vtuber.html)
 function populateVtuberPage() {
   const id = getQueryParam("v");
   if (!id || !vtubers[id]) return;
 
   const vt = vtubers[id];
 
-  // Page title
-  const pageTitle = document.getElementById("pageTitle");
-  if (pageTitle) {
-    pageTitle.textContent = vt.name + " | Indie VTuber Hub";
-  }
   document.title = vt.name + " | Indie VTuber Hub";
 
-  // Theme colors
-  document.body.style.backgroundColor = vt.bg;
+  const body = document.body;
+  if (body) {
+    body.style.backgroundColor = vt.bg;
+  }
+
   const header = document.getElementById("siteHeader");
   if (header) {
     header.style.borderBottomColor = vt.accent;
   }
 
-  // Banner and profile images
   const bannerImg = document.getElementById("bannerImg");
   if (bannerImg) {
-    // You need to place images here: images/<id>/banner.jpg
-    bannerImg.src = "images/" + id + "/banner.jpg";
+    bannerImg.src = `images/${id}/banner.jpg`;
   }
 
   const profileImg = document.getElementById("profileImg");
   if (profileImg) {
-    // You need to place images here: images/<id>/<id>_pfp.jpg
-    profileImg.src = "images/" + id + "/" + id + "_pfp.jpg";
+    profileImg.src = `images/${id}/${id}_pfp.jpg`;
   }
 
-  // Name and description
   const nameEl = document.getElementById("vtuberName");
   if (nameEl) nameEl.textContent = vt.name;
 
   const descEl = document.getElementById("vtuberDesc");
   if (descEl) descEl.textContent = vt.desc;
 
-  // Social links (styled so they don't blend into banners)
+  const aboutEl = document.getElementById("aboutText");
+  if (aboutEl) aboutEl.textContent = vt.desc;
+
+  // Social links
   const socialList = document.getElementById("socialLinks");
   if (socialList) {
     socialList.innerHTML = "";
-    Object.keys(vt.links).forEach((platform) => {
-      const url = vt.links[platform];
+    Object.entries(vt.links).forEach(([platform, url]) => {
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.href = url;
       a.target = "_blank";
       a.rel = "noopener";
       a.textContent = platform;
-
-      // make readable over images
-      a.style.color = "#ffffff";
-      a.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
-      a.style.padding = "4px 10px";
-      a.style.borderRadius = "999px";
-      a.style.display = "inline-block";
-      a.style.marginRight = "6px";
-      a.style.fontSize = "0.9rem";
-
       li.appendChild(a);
       socialList.appendChild(li);
     });
@@ -388,7 +340,7 @@ function populateVtuberPage() {
   const scheduleUl = document.getElementById("scheduleList");
   if (scheduleUl) {
     scheduleUl.innerHTML = "";
-    vt.schedule.forEach((line) => {
+    vt.schedule.forEach(line => {
       const li = document.createElement("li");
       li.textContent = line;
       scheduleUl.appendChild(li);
@@ -399,10 +351,10 @@ function populateVtuberPage() {
   const clipsGrid = document.getElementById("clipsGrid");
   if (clipsGrid) {
     clipsGrid.innerHTML = "";
-    vt.clips.forEach((title) => {
+    vt.clips.forEach(title => {
       const card = document.createElement("article");
       card.className = "video-card";
-      card.setAttribute("data-title", title.toLowerCase());
+      card.dataset.title = title.toLowerCase();
 
       const h4 = document.createElement("h4");
       h4.textContent = title;
@@ -410,177 +362,160 @@ function populateVtuberPage() {
       card.appendChild(h4);
       clipsGrid.appendChild(card);
     });
-  }
 
-  // Clip search filter
-  const clipSearch = document.getElementById("clipSearch");
-  if (clipSearch && clipsGrid) {
-    clipSearch.addEventListener("input", function () {
-      const query = clipSearch.value.toLowerCase();
-      const cards = clipsGrid.querySelectorAll(".video-card");
-      cards.forEach((card) => {
-        const title = card.getAttribute("data-title");
-        if (title && title.indexOf(query) !== -1) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+    const clipSearch = document.getElementById("clipSearch");
+    if (clipSearch) {
+      clipSearch.addEventListener("input", function () {
+        const query = clipSearch.value.toLowerCase();
+        const cards = clipsGrid.querySelectorAll(".video-card");
+        cards.forEach(card => {
+          const title = card.dataset.title || "";
+          card.style.display = title.includes(query) ? "block" : "none";
+        });
       });
-    });
+    }
   }
 
   // Merch preview on VTuber page
   const merchGridVT = document.getElementById("merchGridVT");
   if (merchGridVT) {
     merchGridVT.innerHTML = "";
-    vt.merch.forEach((item) => {
+    vt.merch.forEach(item => {
       const card = document.createElement("article");
       card.className = "merch-card";
-      card.setAttribute("data-vt", id);
-      card.setAttribute("data-item", item.id);
+      card.dataset.vt = id;
+      card.dataset.item = item.id;
 
-      const title = document.createElement("h4");
-      title.textContent = item.title;
+      const titleEl = document.createElement("h4");
+      titleEl.textContent = item.title;
 
-      const price = document.createElement("p");
+      const priceEl = document.createElement("p");
       if (item.soldOut) {
-        const spanOld = document.createElement("span");
-        spanOld.className = "sold-out";
-        spanOld.textContent = "$" + item.price.toFixed(2);
-        const spanText = document.createElement("span");
-        spanText.textContent = " Sold out";
-        price.appendChild(spanOld);
-        price.appendChild(spanText);
+        const oldSpan = document.createElement("span");
+        oldSpan.className = "sold-out";
+        oldSpan.textContent = `$${item.price.toFixed(2)}`;
+        const textSpan = document.createElement("span");
+        textSpan.textContent = " Sold out";
+        priceEl.appendChild(oldSpan);
+        priceEl.appendChild(textSpan);
       } else {
-        price.textContent = "$" + item.price.toFixed(2);
+        priceEl.textContent = `$${item.price.toFixed(2)}`;
       }
 
-      card.appendChild(title);
-      card.appendChild(price);
+      card.appendChild(titleEl);
+      card.appendChild(priceEl);
       merchGridVT.appendChild(card);
 
-      // Open modal from VTuber page as well
-      card.addEventListener("click", function () {
+      card.addEventListener("click", () => {
         openMerchModal(id, item.id);
       });
     });
   }
 
-  // Fan art section on VTuber page
-  // Make sure vtuber.html has: <div id="fanartGrid" class="fanart-grid"></div>
+  // Fan art specific to this VTuber
   const fanartGrid = document.getElementById("fanartGrid");
   if (fanartGrid && vt.fanart && vt.fanart.length) {
     fanartGrid.innerHTML = "";
-    vt.fanart.forEach((fa) => {
+    vt.fanart.forEach(fa => {
       const card = document.createElement("article");
       card.className = "fanart-card";
 
-      const title = document.createElement("h4");
-      title.textContent = fa.title;
+      const titleEl = document.createElement("h4");
+      titleEl.textContent = fa.title;
 
       const meta = document.createElement("p");
       meta.className = "small muted";
       if (fa.url && fa.url.trim() !== "") {
-        meta.innerHTML = `By ${fa.credit} — <a href="${fa.url}" target="_blank" rel="noopener">view</a>`;
+        meta.innerHTML = `By ${fa.credit} · <a href="${fa.url}" target="_blank" rel="noopener">view</a>`;
       } else {
-        meta.textContent = "By " + fa.credit;
+        meta.textContent = `By ${fa.credit}`;
       }
 
-      card.appendChild(title);
+      card.appendChild(titleEl);
       card.appendChild(meta);
       fanartGrid.appendChild(card);
     });
   }
 }
 
-// Fill shop page grid
+// SHOP PAGE
 function populateShopPage() {
   const grid = document.getElementById("merchGridShop");
   if (!grid) return;
 
   grid.innerHTML = "";
-  Object.keys(vtubers).forEach((id) => {
-    const vt = vtubers[id];
-    vt.merch.forEach((item) => {
+  Object.entries(vtubers).forEach(([id, vt]) => {
+    vt.merch.forEach(item => {
       const card = document.createElement("article");
       card.className = "merch-card";
-      card.setAttribute("data-vt", id);
-      card.setAttribute("data-item", item.id);
-      card.setAttribute("data-tag", item.tag);
+      card.dataset.vt = id;
+      card.dataset.item = item.id;
+      card.dataset.tag = item.tag;
 
-      const title = document.createElement("h3");
-      title.textContent = item.title;
+      const titleEl = document.createElement("h3");
+      titleEl.textContent = item.title;
 
-      const price = document.createElement("p");
+      const priceEl = document.createElement("p");
       if (item.soldOut) {
-        const spanOld = document.createElement("span");
-        spanOld.className = "sold-out";
-        spanOld.textContent = "$" + item.price.toFixed(2);
-        const spanText = document.createElement("span");
-        spanText.textContent = " Sold out";
-        price.appendChild(spanOld);
-        price.appendChild(spanText);
+        const oldSpan = document.createElement("span");
+        oldSpan.className = "sold-out";
+        oldSpan.textContent = `$${item.price.toFixed(2)}`;
+        const textSpan = document.createElement("span");
+        textSpan.textContent = " Sold out";
+        priceEl.appendChild(oldSpan);
+        priceEl.appendChild(textSpan);
       } else {
-        price.textContent = "$" + item.price.toFixed(2);
+        priceEl.textContent = `$${item.price.toFixed(2)}`;
       }
 
       const byline = document.createElement("p");
       byline.className = "small muted";
-      byline.textContent = "Creator: " + vt.name;
+      byline.textContent = `Creator: ${vt.name}`;
 
-      card.appendChild(title);
-      card.appendChild(price);
+      card.appendChild(titleEl);
+      card.appendChild(priceEl);
       card.appendChild(byline);
       grid.appendChild(card);
 
-      card.addEventListener("click", function () {
+      card.addEventListener("click", () => {
         openMerchModal(id, item.id);
       });
     });
   });
 
-  // Search by item name
+  // Search
   const searchInput = document.getElementById("merchSearch");
   if (searchInput) {
-    searchInput.addEventListener("input", function () {
+    searchInput.addEventListener("input", () => {
       const query = searchInput.value.toLowerCase();
       const cards = grid.querySelectorAll(".merch-card");
-      cards.forEach((card) => {
+      cards.forEach(card => {
         const title = card.querySelector("h3");
-        if (!title) return;
-        const text = title.textContent.toLowerCase();
-        if (text.indexOf(query) !== -1) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+        const text = title ? title.textContent.toLowerCase() : "";
+        card.style.display = text.includes(query) ? "block" : "none";
       });
     });
   }
 
-  // Filter by tag
+  // Filter
   const filterSelect = document.getElementById("merchFilter");
   if (filterSelect) {
-    filterSelect.addEventListener("change", function () {
+    filterSelect.addEventListener("change", () => {
       const value = filterSelect.value;
       const cards = grid.querySelectorAll(".merch-card");
-      cards.forEach((card) => {
-        const tag = card.getAttribute("data-tag");
-        if (value === "all" || tag === value) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+      cards.forEach(card => {
+        const tag = card.dataset.tag;
+        card.style.display = (value === "all" || tag === value) ? "block" : "none";
       });
     });
   }
 }
 
-// Modal for merch details
+// MERCH MODAL
 function openMerchModal(vtId, merchId) {
   const vt = vtubers[vtId];
   if (!vt) return;
-  const merch = vt.merch.find((m) => m.id === merchId);
+  const merch = vt.merch.find(m => m.id === merchId);
   if (!merch) return;
 
   const modal = document.getElementById("merchModal");
@@ -592,23 +527,27 @@ function openMerchModal(vtId, merchId) {
   const reviewList = document.getElementById("modalReviewsShop");
 
   if (titleEl) titleEl.textContent = merch.title;
-  if (priceEl) priceEl.textContent = "$" + merch.price.toFixed(2);
-  if (stockEl) stockEl.textContent = merch.soldOut ? "Status: sold out" : "Status: available";
+  if (priceEl) priceEl.textContent = `$${merch.price.toFixed(2)}`;
+  if (stockEl) {
+    stockEl.textContent = merch.soldOut ? "Status: sold out" : "Status: available";
+  }
 
   if (reviewList) {
     reviewList.innerHTML = "";
-    merch.reviews.forEach((r) => {
+    merch.reviews.forEach(r => {
       const li = document.createElement("li");
       const strong = document.createElement("strong");
       strong.textContent = r.name + " ";
       const stars = "★".repeat(r.stars);
+      const starsNode = document.createTextNode(stars);
+      const br = document.createElement("br");
       const textSpan = document.createElement("span");
       textSpan.className = "muted small";
       textSpan.textContent = " " + r.text;
 
       li.appendChild(strong);
-      li.appendChild(document.createTextNode(stars));
-      li.appendChild(document.createElement("br"));
+      li.appendChild(starsNode);
+      li.appendChild(br);
       li.appendChild(textSpan);
       reviewList.appendChild(li);
     });
@@ -618,30 +557,60 @@ function openMerchModal(vtId, merchId) {
 
   const closeBtn = document.getElementById("modalCloseShop");
   if (closeBtn) {
-    closeBtn.onclick = function () {
+    closeBtn.onclick = () => {
       modal.style.display = "none";
     };
   }
 
-  // Close when clicking outside
   window.onclick = function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
     }
   };
 
-  // Simple cart button behaviour
   const cartBtn = document.getElementById("cartBtnShop");
   if (cartBtn) {
     cartBtn.onclick = function () {
-      alert('This is a simple demo: "' + merch.title + '" was added to a test cart.');
+      alert(`Demo cart: "${merch.title}" added.`);
     };
   }
 }
 
-// Initialise everything when the DOM is ready
+// FAN ART PAGE (art.html)
+function populateArtPage() {
+  const artGrid = document.getElementById("artGrid");
+  if (!artGrid) return;
+
+  artGrid.innerHTML = "";
+  Object.entries(vtubers).forEach(([id, vt]) => {
+    if (!vt.fanart || !vt.fanart.length) return;
+
+    vt.fanart.forEach(fa => {
+      const card = document.createElement("article");
+      card.className = "fanart-card";
+
+      const titleEl = document.createElement("h4");
+      titleEl.textContent = fa.title;
+
+      const meta = document.createElement("p");
+      meta.className = "small muted";
+      if (fa.url && fa.url.trim() !== "") {
+        meta.innerHTML = `${vt.name} — by ${fa.credit} · <a href="${fa.url}" target="_blank" rel="noopener">view</a>`;
+      } else {
+        meta.textContent = `${vt.name} — by ${fa.credit}`;
+      }
+
+      card.appendChild(titleEl);
+      card.appendChild(meta);
+      artGrid.appendChild(card);
+    });
+  });
+}
+
+// INIT
 document.addEventListener("DOMContentLoaded", function () {
   setupHeroSlider();
   populateVtuberPage();
   populateShopPage();
+  populateArtPage();
 });
