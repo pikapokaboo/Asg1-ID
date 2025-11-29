@@ -71,7 +71,6 @@ const vtubers = {
     links: {
       YouTube: "https://www.youtube.com/@SamekoSaba",
       Twitter: "https://x.com/samekosaba"
-      // No Twitch key because she does not use Twitch
     },
     clips: [
       "Chill drawing session",
