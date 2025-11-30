@@ -435,5 +435,5 @@ document.addEventListener("DOMContentLoaded", function () {
   populateVtuberPage();
   populateShopPage();
   populateArtPage();
-  populateMerchPreviewVT(); // ✅ merch preview added to profile page
+  populateMerchPreviewVT();
 });
