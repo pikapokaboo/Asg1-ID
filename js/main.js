@@ -1,3 +1,12 @@
+// Politely remind the browser to freaking resize
+window.addEventListener('pageshow', () => {
+  window.dispatchEvent(new Event('resize'));
+});
+
+window.addEventListener('load', () => {
+  window.dispatchEvent(new Event('resize'));
+});
+
 // VTuber data reused by profiles, vtuber pages, shop and fan art
 const vtubers = {
   dokibird: {
