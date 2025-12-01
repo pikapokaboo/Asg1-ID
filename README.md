@@ -25,7 +25,7 @@ This project was made for fellow VTuber fans who enjoy personality-driven browsi
 ## 🎨 Design Process
 The website is built **for VTuber fans and students exploring fandom culture** — specifically people who want:
 - easy discovery of indie creators
-- a clean, dark-theme aesthetic
+- a clean, dark-theme aesthetic (cos who likes light mode)
 - quick access to live streams and fan art
 
 The project helps them achieve this by using:
@@ -40,12 +40,7 @@ The project helps them achieve this by using:
 
 ### Wireframes & Mockups
 Design files created during the process:
-
-- **Adobe XD Wireframe:**  
-  https://xd.adobe.com/view/adfa0c5e-8f26-4d7f-b428-aa22d43d027b-f8a9/
-
-- **PDF Mockups:**  
-  Included in `/mockups/` directory in the project repo
+WIP
 
 ---
 
@@ -57,10 +52,6 @@ Design files created during the process:
 - **Fandom Art Gallery** — View curated fan artworks by community artists
 - **Dark Theme UI** — Consistent immersive visual identity across pages
 - **Responsive Layouts (Fixed Navigation Resizing Bug)** — CSS and JS combine to auto-apply resizing on navigation
-
-### 🚧 Features Left to Implement
-- **Search & Filter Bar** — Let users type-search creators
-- **Favorite Creators Save** — Bookmark creators in the UI
 
 ---
 
