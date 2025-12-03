@@ -40,7 +40,7 @@ The project helps them achieve this by using:
 
 ### Wireframes & Mockups
 Design files created during the process:
-WIP
+https://www.figma.com/site/KG001MS9lwk8niDt8P4kmg/Module_S10270880E_ReynerChye_Assg1_wireframe?node-id=0-1&t=fw0dhi2dgzOt5tGt-1
 
 ---
 
